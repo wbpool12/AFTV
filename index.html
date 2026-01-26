@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="All FORE The View - A luxurious 3,389 sq ft cabin rental nestled on over an acre of serene woods. Sleeps up to 16 guests with stunning views and premium amenities.">
-    <title>All FORE The View | Luxury Cabin Retreat</title>
-
+    <meta name="description" content="All FORE The View - A luxurious 3,389 sq ft cabin nestled on over an acre of serene woods near Hochatown, Oklahoma. Sleeps up to 16 guests.">
+    <title>All FORE The View | Luxury Cabin in Broken Bow, Oklahoma</title>
+ 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=32">
+ 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+ 
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
     <style>
         /* ============================================
            WILDWOOD-INSPIRED DESIGN SYSTEM
-           Nature-focused, Modern Luxury Aesthetic
+           All FORE The View - Custom Theme
            ============================================ */
-
+ 
         :root {
             /* Earthy Color Palette */
             --color-forest: #2C3E2D;
@@ -34,11 +40,11 @@
             --color-charcoal-light: #4A4A4A;
             --color-gold: #B8956B;
             --color-gold-light: #D4B896;
-
+ 
             /* Typography */
             --font-heading: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Montserrat', -apple-system, sans-serif;
-
+ 
             /* Spacing */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
@@ -46,27 +52,27 @@
             --space-lg: 4rem;
             --space-xl: 6rem;
             --space-2xl: 8rem;
-
+ 
             /* Transitions */
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-fast: all 0.2s ease;
         }
-
+ 
         /* ============================================
            RESET & BASE STYLES
            ============================================ */
-
+ 
         *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         html {
             scroll-behavior: smooth;
             font-size: 16px;
         }
-
+ 
         body {
             font-family: var(--font-body);
             font-weight: 400;
@@ -75,64 +81,64 @@
             background-color: var(--color-warm-white);
             overflow-x: hidden;
         }
-
+ 
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-
+ 
         a {
             text-decoration: none;
             color: inherit;
             transition: var(--transition-fast);
         }
-
+ 
         ul {
             list-style: none;
         }
-
+ 
         /* ============================================
            TYPOGRAPHY
            ============================================ */
-
+ 
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-heading);
             font-weight: 500;
             line-height: 1.2;
             color: var(--color-forest-dark);
         }
-
+ 
         h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             letter-spacing: 0.02em;
         }
-
+ 
         h2 {
             font-size: clamp(2rem, 4vw, 3rem);
             letter-spacing: 0.01em;
         }
-
+ 
         h3 {
             font-size: clamp(1.5rem, 3vw, 2rem);
         }
-
+ 
         h4 {
             font-size: 1.25rem;
         }
-
+ 
         p {
             font-size: 1rem;
             color: var(--color-charcoal-light);
             max-width: 65ch;
         }
-
+ 
         .lead {
             font-size: 1.125rem;
             font-weight: 300;
             line-height: 1.8;
         }
-
+ 
         .section-label {
             font-family: var(--font-body);
             font-size: 0.75rem;
@@ -141,100 +147,161 @@
             text-transform: uppercase;
             color: var(--color-sage);
             margin-bottom: var(--space-sm);
+            display: block;
         }
-
+ 
+        /* ============================================
+           BUTTONS
+           ============================================ */
+ 
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+ 
+        .btn--primary {
+            background: var(--color-gold);
+            color: var(--color-warm-white);
+        }
+ 
+        .btn--primary:hover {
+            background: var(--color-gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+ 
+        .btn--secondary {
+            background: transparent;
+            color: var(--color-forest);
+            border: 2px solid var(--color-forest);
+        }
+ 
+        .btn--secondary:hover {
+            background: var(--color-forest);
+            color: var(--color-warm-white);
+        }
+ 
+        .btn--white {
+            background: var(--color-warm-white);
+            color: var(--color-forest);
+        }
+ 
+        .btn--white:hover {
+            background: var(--color-cream);
+            transform: translateY(-3px);
+        }
+ 
         /* ============================================
            NAVIGATION
            ============================================ */
-
+ 
         .nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            padding: 1.5rem 3rem;
+            padding: 1.25rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: var(--transition-smooth);
         }
-
+ 
         .nav--transparent {
             background: transparent;
         }
-
+ 
         .nav--solid {
-            background: var(--color-warm-white);
+            background: rgba(253, 252, 250, 0.97);
+            backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-            padding: 1rem 3rem;
+            padding: 0.75rem 3rem;
         }
-
+ 
         .nav__logo {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--color-warm-white);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+ 
+        .nav__logo img {
+            height: 50px;
+            width: auto;
             transition: var(--transition-smooth);
         }
-
-        .nav--solid .nav__logo {
-            color: var(--color-forest-dark);
+ 
+        .nav--solid .nav__logo img {
+            height: 40px;
         }
-
+ 
         .nav__menu {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 2rem;
         }
-
+ 
         .nav__link {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--color-warm-white);
             position: relative;
             padding: 0.5rem 0;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
-
+ 
         .nav--solid .nav__link {
             color: var(--color-charcoal);
+            text-shadow: none;
         }
-
+ 
         .nav__link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 0;
-            height: 1px;
-            background: currentColor;
+            height: 2px;
+            background: var(--color-gold);
             transition: var(--transition-fast);
         }
-
-        .nav__link:hover::after {
+ 
+        .nav__link:hover::after,
+        .nav__link.active::after {
             width: 100%;
         }
-
+ 
         .nav__cta {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            padding: 0.875rem 1.75rem;
+            padding: 0.875rem 1.5rem;
             background: var(--color-gold);
             color: var(--color-warm-white);
             border: none;
             cursor: pointer;
             transition: var(--transition-smooth);
         }
-
+ 
         .nav__cta:hover {
             background: var(--color-gold-light);
             transform: translateY(-2px);
         }
-
+ 
         .nav__toggle {
             display: none;
             flex-direction: column;
@@ -243,23 +310,24 @@
             border: none;
             cursor: pointer;
             padding: 0.5rem;
+            z-index: 1001;
         }
-
+ 
         .nav__toggle span {
             width: 24px;
             height: 2px;
             background: var(--color-warm-white);
             transition: var(--transition-fast);
         }
-
+ 
         .nav--solid .nav__toggle span {
             background: var(--color-charcoal);
         }
-
+ 
         /* ============================================
            HERO SECTION
            ============================================ */
-
+ 
         .hero {
             position: relative;
             height: 100vh;
@@ -269,565 +337,654 @@
             justify-content: center;
             overflow: hidden;
         }
-
-        .hero__media {
+ 
+        .hero__slider {
             position: absolute;
             inset: 0;
             z-index: -2;
         }
-
-        .hero__image {
+ 
+        .hero__slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+ 
+        .hero__slide.active {
+            opacity: 1;
+        }
+ 
+        .hero__slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .hero__video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+ 
         .hero__overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(26, 42, 27, 0.4) 0%,
-                rgba(26, 42, 27, 0.5) 50%,
+                rgba(26, 42, 27, 0.3) 0%,
+                rgba(26, 42, 27, 0.4) 50%,
                 rgba(26, 42, 27, 0.7) 100%
             );
             z-index: -1;
         }
-
+ 
         .hero__content {
             text-align: center;
             padding: var(--space-md);
-            max-width: 900px;
+            max-width: 1000px;
         }
-
-        .hero__label {
-            font-family: var(--font-body);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--color-gold-light);
-            margin-bottom: var(--space-md);
+ 
+        .hero__logo {
+            width: 180px;
+            height: auto;
+            margin: 0 auto var(--space-md);
+            filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+            animation: fadeInDown 1s ease-out;
         }
-
+ 
         .hero__title {
             color: var(--color-warm-white);
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-sm);
             text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
-
+ 
         .hero__subtitle {
             font-family: var(--font-heading);
             font-size: clamp(1.125rem, 2vw, 1.5rem);
             font-weight: 400;
             font-style: italic;
             color: var(--color-cream);
-            margin-bottom: var(--space-lg);
+            margin-bottom: var(--space-md);
             opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.5s both;
         }
-
-        .hero__cta {
-            display: inline-flex;
+ 
+        .hero__location {
+            display: flex;
             align-items: center;
-            gap: 0.75rem;
+            justify-content: center;
+            gap: 0.5rem;
             font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold-light);
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+ 
+        .hero__location svg {
+            width: 18px;
+            height: 18px;
+        }
+ 
+        .hero__cta-group {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+ 
+        .hero__stats {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(26, 42, 27, 0.9);
+            backdrop-filter: blur(10px);
+        }
+ 
+        .hero__stat {
+            padding: 1.5rem 3rem;
+            text-align: center;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+ 
+        .hero__stat:last-child {
+            border-right: none;
+        }
+ 
+        .hero__stat-number {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-gold-light);
+            line-height: 1;
+        }
+ 
+        .hero__stat-label {
+            font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            padding: 1.125rem 2.5rem;
-            background: var(--color-gold);
-            color: var(--color-warm-white);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition-smooth);
+            color: var(--color-sage-light);
+            margin-top: 0.25rem;
         }
-
-        .hero__cta:hover {
-            background: var(--color-gold-light);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+ 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
-        .hero__scroll {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--color-cream);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            opacity: 0.8;
-            animation: float 3s ease-in-out infinite;
+ 
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
-        .hero__scroll-line {
-            width: 1px;
-            height: 50px;
-            background: linear-gradient(to bottom, var(--color-cream), transparent);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-
+ 
         /* ============================================
            SECTIONS - COMMON STYLES
            ============================================ */
-
+ 
         .section {
             padding: var(--space-xl) var(--space-md);
         }
-
+ 
         .section--cream {
             background: var(--color-cream);
         }
-
+ 
         .section--forest {
             background: var(--color-forest);
             color: var(--color-cream);
         }
-
+ 
         .section--forest h2,
         .section--forest h3,
         .section--forest h4 {
             color: var(--color-cream);
         }
-
+ 
         .section--forest p {
             color: var(--color-sage-light);
         }
-
+ 
         .section--forest .section-label {
             color: var(--color-gold-light);
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 var(--space-md);
         }
-
+ 
         .section__header {
             text-align: center;
             margin-bottom: var(--space-xl);
         }
-
+ 
         .section__header h2 {
             margin-bottom: var(--space-sm);
         }
-
+ 
         .section__header p {
             margin: 0 auto;
         }
-
+ 
         /* ============================================
            ABOUT SECTION
            ============================================ */
-
+ 
         .about {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
             gap: var(--space-xl);
             align-items: center;
         }
-
-        .about__image-wrapper {
+ 
+        .about__images {
             position: relative;
-        }
-
-        .about__image {
-            width: 100%;
             height: 600px;
-            object-fit: cover;
         }
-
-        .about__image-accent {
+ 
+        .about__image-main {
             position: absolute;
-            bottom: -30px;
-            right: -30px;
-            width: 200px;
-            height: 200px;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 80%;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+ 
+        .about__image-secondary {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 55%;
+            height: 50%;
+            object-fit: cover;
+            border: 8px solid var(--color-warm-white);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+ 
+        .about__accent {
+            position: absolute;
+            top: -20px;
+            right: 20%;
+            width: 150px;
+            height: 150px;
             background: var(--color-sage);
-            opacity: 0.3;
+            opacity: 0.2;
             z-index: -1;
         }
-
+ 
         .about__content h2 {
             margin-bottom: var(--space-md);
         }
-
+ 
         .about__content p {
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-sm);
         }
-
-        .about__stats {
+ 
+        .about__features {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
             margin-top: var(--space-lg);
-            padding-top: var(--space-lg);
-            border-top: 1px solid var(--color-cream-dark);
         }
-
-        .about__stat {
-            text-align: center;
+ 
+        .about__feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
-
-        .about__stat-number {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--color-forest);
-            line-height: 1;
-            margin-bottom: 0.5rem;
+ 
+        .about__feature-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-cream);
+            border-radius: 50%;
         }
-
-        .about__stat-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-sage);
+ 
+        .about__feature-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-forest);
+            stroke-width: 2;
+            fill: none;
         }
-
+ 
+        .about__feature span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+        }
+ 
         /* ============================================
-           FEATURES / AMENITIES SECTION
+           AMENITIES GRID
            ============================================ */
-
-        .features__grid {
+ 
+        .amenities-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: var(--space-md);
         }
-
-        .feature-card {
+ 
+        .amenity-card {
             text-align: center;
             padding: var(--space-lg) var(--space-md);
             background: var(--color-warm-white);
+            border: 1px solid var(--color-cream-dark);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .amenity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--color-gold);
+            transform: scaleX(0);
             transition: var(--transition-smooth);
         }
-
-        .section--cream .feature-card {
-            background: var(--color-warm-white);
+ 
+        .amenity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: transparent;
         }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+ 
+        .amenity-card:hover::before {
+            transform: scaleX(1);
         }
-
-        .feature-card__icon {
-            width: 60px;
-            height: 60px;
+ 
+        .amenity-card__icon {
+            width: 70px;
+            height: 70px;
             margin: 0 auto var(--space-md);
             display: flex;
             align-items: center;
             justify-content: center;
+            background: var(--color-cream);
+            border-radius: 50%;
+            transition: var(--transition-smooth);
         }
-
-        .feature-card__icon svg {
-            width: 40px;
-            height: 40px;
+ 
+        .amenity-card:hover .amenity-card__icon {
+            background: var(--color-forest);
+        }
+ 
+        .amenity-card__icon svg {
+            width: 32px;
+            height: 32px;
             stroke: var(--color-forest);
             stroke-width: 1.5;
             fill: none;
+            transition: var(--transition-smooth);
         }
-
-        .feature-card h4 {
-            margin-bottom: var(--space-xs);
+ 
+        .amenity-card:hover .amenity-card__icon svg {
+            stroke: var(--color-warm-white);
+        }
+ 
+        .amenity-card h4 {
             font-family: var(--font-heading);
             font-size: 1.25rem;
+            margin-bottom: var(--space-xs);
         }
-
-        .feature-card p {
+ 
+        .amenity-card p {
             font-size: 0.9rem;
             margin: 0 auto;
         }
-
+ 
         /* ============================================
-           GALLERY SECTION
+           GALLERY PREVIEW
            ============================================ */
-
-        .gallery__grid {
+ 
+        .gallery-preview {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(12, 1fr);
             grid-template-rows: repeat(2, 300px);
             gap: var(--space-sm);
         }
-
-        .gallery__item {
+ 
+        .gallery-preview__item {
             position: relative;
             overflow: hidden;
             cursor: pointer;
         }
-
-        .gallery__item:first-child {
-            grid-column: span 2;
+ 
+        .gallery-preview__item:nth-child(1) {
+            grid-column: span 6;
             grid-row: span 2;
         }
-
-        .gallery__item img {
+ 
+        .gallery-preview__item:nth-child(2) {
+            grid-column: span 3;
+        }
+ 
+        .gallery-preview__item:nth-child(3) {
+            grid-column: span 3;
+        }
+ 
+        .gallery-preview__item:nth-child(4) {
+            grid-column: span 3;
+        }
+ 
+        .gallery-preview__item:nth-child(5) {
+            grid-column: span 3;
+            position: relative;
+        }
+ 
+        .gallery-preview__item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition-smooth);
         }
-
-        .gallery__item:hover img {
-            transform: scale(1.05);
+ 
+        .gallery-preview__item:hover img {
+            transform: scale(1.08);
         }
-
-        .gallery__item-overlay {
+ 
+        .gallery-preview__overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(26, 42, 27, 0.6), transparent);
+            background: linear-gradient(to top, rgba(26, 42, 27, 0.7), transparent);
             opacity: 0;
             transition: var(--transition-smooth);
             display: flex;
             align-items: flex-end;
+            justify-content: center;
             padding: var(--space-md);
         }
-
-        .gallery__item:hover .gallery__item-overlay {
+ 
+        .gallery-preview__item:hover .gallery-preview__overlay {
             opacity: 1;
         }
-
-        .gallery__item-label {
-            font-size: 0.85rem;
+ 
+        .gallery-preview__label {
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--color-warm-white);
             letter-spacing: 0.05em;
         }
-
+ 
+        .gallery-preview__more {
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 42, 27, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-warm-white);
+            transition: var(--transition-smooth);
+        }
+ 
+        .gallery-preview__more:hover {
+            background: rgba(26, 42, 27, 0.9);
+        }
+ 
+        .gallery-preview__more-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+ 
+        .gallery-preview__more-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+ 
         /* ============================================
-           EXPERIENCE / ACTIVITIES SECTION
+           EXPERIENCE SECTION
            ============================================ */
-
-        .experiences__grid {
+ 
+        .experience {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
         }
-
-        .experience-card {
+ 
+        .experience__image {
             position: relative;
-            height: 450px;
             overflow: hidden;
-            cursor: pointer;
         }
-
-        .experience-card__image {
+ 
+        .experience__image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition-smooth);
         }
-
-        .experience-card:hover .experience-card__image {
-            transform: scale(1.08);
-        }
-
-        .experience-card__overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(26, 42, 27, 0.85) 0%,
-                rgba(26, 42, 27, 0.3) 50%,
-                transparent 100%
-            );
+ 
+        .experience__content {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            padding: var(--space-lg);
-            transition: var(--transition-smooth);
+            justify-content: center;
+            padding: var(--space-xl);
+            background: var(--color-forest);
         }
-
-        .experience-card:hover .experience-card__overlay {
-            background: linear-gradient(
-                to top,
-                rgba(26, 42, 27, 0.9) 0%,
-                rgba(26, 42, 27, 0.5) 60%,
-                rgba(26, 42, 27, 0.2) 100%
-            );
+ 
+        .experience__content .section-label {
+            color: var(--color-gold-light);
         }
-
-        .experience-card__content h3 {
-            color: var(--color-warm-white);
-            font-size: 1.5rem;
-            margin-bottom: var(--space-xs);
+ 
+        .experience__content h2 {
+            color: var(--color-cream);
+            margin-bottom: var(--space-md);
         }
-
-        .experience-card__content p {
+ 
+        .experience__content p {
             color: var(--color-sage-light);
-            font-size: 0.9rem;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: var(--transition-smooth);
-        }
-
-        .experience-card:hover .experience-card__content p {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ============================================
-           AMENITIES LIST SECTION
-           ============================================ */
-
-        .amenities {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: start;
-        }
-
-        .amenities__content {
-            position: sticky;
-            top: 120px;
-        }
-
-        .amenities__content h2 {
             margin-bottom: var(--space-md);
         }
-
-        .amenities__content p {
-            margin-bottom: var(--space-md);
-        }
-
-        .amenities__list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-md);
-        }
-
-        .amenities__category h4 {
-            font-family: var(--font-heading);
-            font-size: 1.125rem;
-            margin-bottom: var(--space-sm);
-            color: var(--color-forest);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .amenities__category ul {
+ 
+        .experience__list {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
         }
-
-        .amenities__category li {
-            font-size: 0.9rem;
-            color: var(--color-charcoal-light);
+ 
+        .experience__item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: var(--space-sm);
+            color: var(--color-cream);
+            font-size: 0.95rem;
         }
-
-        .amenities__category li::before {
-            content: '';
-            width: 4px;
-            height: 4px;
-            background: var(--color-sage);
-            border-radius: 50%;
+ 
+        .experience__item svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-gold);
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
         }
-
+ 
         /* ============================================
-           BOOKING / CTA SECTION
+           BOOKING CTA SECTION
            ============================================ */
-
-        .booking {
+ 
+        .booking-cta {
             position: relative;
             padding: var(--space-2xl) var(--space-md);
             text-align: center;
             overflow: hidden;
         }
-
-        .booking__bg {
+ 
+        .booking-cta__bg {
             position: absolute;
             inset: 0;
             z-index: -2;
         }
-
-        .booking__bg img {
+ 
+        .booking-cta__bg img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
-        .booking__overlay {
+ 
+        .booking-cta__overlay {
             position: absolute;
             inset: 0;
             background: rgba(26, 42, 27, 0.85);
             z-index: -1;
         }
-
-        .booking__content {
-            max-width: 700px;
+ 
+        .booking-cta__content {
+            max-width: 800px;
             margin: 0 auto;
         }
-
-        .booking__content .section-label {
+ 
+        .booking-cta__content .section-label {
             color: var(--color-gold-light);
         }
-
-        .booking__content h2 {
+ 
+        .booking-cta__content h2 {
             color: var(--color-warm-white);
             margin-bottom: var(--space-md);
         }
-
-        .booking__content p {
+ 
+        .booking-cta__content > p {
             color: var(--color-sage-light);
             margin: 0 auto var(--space-lg);
             font-size: 1.125rem;
         }
-
-        .booking__form {
+ 
+        .booking-widget {
             display: flex;
             gap: var(--space-sm);
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: var(--space-md);
+            background: rgba(255,255,255,0.1);
+            padding: var(--space-md);
+            backdrop-filter: blur(10px);
         }
-
-        .booking__input {
-            padding: 1rem 1.5rem;
+ 
+        .booking-widget__field {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+        }
+ 
+        .booking-widget__label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gold-light);
+        }
+ 
+        .booking-widget__input {
+            padding: 0.875rem 1.25rem;
             font-family: var(--font-body);
             font-size: 0.9rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.1);
             color: var(--color-warm-white);
-            min-width: 180px;
+            min-width: 160px;
         }
-
-        .booking__input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .booking__input:focus {
+ 
+        .booking-widget__input:focus {
             outline: none;
             border-color: var(--color-gold);
             background: rgba(255, 255, 255, 0.15);
         }
-
-        .booking__submit {
-            padding: 1rem 2.5rem;
+ 
+        .booking-widget__submit {
+            align-self: flex-end;
+            padding: 0.875rem 2rem;
             font-family: var(--font-body);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -837,230 +994,207 @@
             cursor: pointer;
             transition: var(--transition-smooth);
         }
-
-        .booking__submit:hover {
+ 
+        .booking-widget__submit:hover {
             background: var(--color-gold-light);
             transform: translateY(-2px);
         }
-
-        .booking__note {
+ 
+        .booking-cta__note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
             font-size: 0.85rem;
             color: var(--color-sage-light);
-            opacity: 0.8;
         }
-
+ 
+        .booking-cta__note svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--color-gold);
+        }
+ 
         /* ============================================
-           TESTIMONIALS
+           LOCATION SECTION
            ============================================ */
-
-        .testimonial {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial__quote {
-            font-family: var(--font-heading);
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-style: italic;
-            line-height: 1.6;
-            color: var(--color-forest-dark);
-            margin-bottom: var(--space-md);
-        }
-
-        .testimonial__quote::before {
-            content: '"';
-            font-size: 4rem;
-            line-height: 0;
-            color: var(--color-sage);
-            opacity: 0.5;
-            display: block;
-            margin-bottom: var(--space-sm);
-        }
-
-        .testimonial__author {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--color-charcoal);
-        }
-
-        .testimonial__location {
-            font-size: 0.85rem;
-            color: var(--color-sage);
-        }
-
-        /* ============================================
-           CONTACT SECTION
-           ============================================ */
-
-        .contact {
+ 
+        .location {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-xl);
+            align-items: center;
         }
-
-        .contact__info h2 {
+ 
+        .location__content h2 {
             margin-bottom: var(--space-md);
         }
-
-        .contact__info p {
-            margin-bottom: var(--space-lg);
+ 
+        .location__content p {
+            margin-bottom: var(--space-sm);
         }
-
-        .contact__details {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
+ 
+        .location__highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
         }
-
-        .contact__item {
+ 
+        .location__highlight {
             display: flex;
             align-items: flex-start;
-            gap: var(--space-sm);
+            gap: 0.75rem;
+            padding: var(--space-sm);
+            background: var(--color-cream);
+            transition: var(--transition-smooth);
         }
-
-        .contact__item-icon {
-            width: 24px;
-            height: 24px;
+ 
+        .location__highlight:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+ 
+        .location__highlight-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-forest);
+            border-radius: 50%;
             flex-shrink: 0;
-            margin-top: 2px;
         }
-
-        .contact__item-icon svg {
-            width: 100%;
-            height: 100%;
-            stroke: var(--color-forest);
-            stroke-width: 1.5;
+ 
+        .location__highlight-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-gold-light);
+            stroke-width: 2;
             fill: none;
         }
-
-        .contact__item-content h4 {
+ 
+        .location__highlight-text h4 {
             font-family: var(--font-body);
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-sage);
             margin-bottom: 0.25rem;
         }
-
-        .contact__item-content p {
-            font-size: 1rem;
-            color: var(--color-charcoal);
+ 
+        .location__highlight-text p {
+            font-size: 0.8rem;
+            margin: 0;
         }
-
-        .contact__form {
+ 
+        .location__map {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+ 
+        .location__map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        .location__map-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 42, 27, 0.3), transparent);
             display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
+            align-items: center;
+            justify-content: center;
         }
-
-        .contact__form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-sm);
+ 
+        .location__map-pin {
+            width: 80px;
+            height: 80px;
+            background: var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
         }
-
-        .contact__input,
-        .contact__textarea {
-            padding: 1rem 1.25rem;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            border: 1px solid var(--color-cream-dark);
-            background: var(--color-warm-white);
-            color: var(--color-charcoal);
-            transition: var(--transition-fast);
+ 
+        .location__map-pin svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--color-warm-white);
+            stroke-width: 2;
+            fill: none;
         }
-
-        .contact__input:focus,
-        .contact__textarea:focus {
-            outline: none;
-            border-color: var(--color-sage);
+ 
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            }
         }
-
-        .contact__textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .contact__submit {
-            padding: 1.125rem 2rem;
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            background: var(--color-forest);
-            color: var(--color-warm-white);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            align-self: flex-start;
-        }
-
-        .contact__submit:hover {
-            background: var(--color-forest-light);
-            transform: translateY(-2px);
-        }
-
+ 
         /* ============================================
            FOOTER
            ============================================ */
-
+ 
         .footer {
             background: var(--color-forest-dark);
             color: var(--color-cream);
             padding: var(--space-xl) var(--space-md) var(--space-md);
         }
-
+ 
         .footer__content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
             gap: var(--space-lg);
             margin-bottom: var(--space-lg);
         }
-
-        .footer__brand h3 {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            color: var(--color-cream);
-            margin-bottom: var(--space-sm);
+ 
+        .footer__brand img {
+            height: 60px;
+            width: auto;
+            margin-bottom: var(--space-md);
         }
-
+ 
         .footer__brand p {
             color: var(--color-sage-light);
             font-size: 0.9rem;
             margin-bottom: var(--space-md);
         }
-
+ 
         .footer__social {
             display: flex;
             gap: var(--space-sm);
         }
-
+ 
         .footer__social a {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--color-forest-light);
             transition: var(--transition-fast);
         }
-
+ 
         .footer__social a:hover {
-            background: var(--color-forest-light);
-            border-color: var(--color-forest-light);
+            background: var(--color-gold);
+            border-color: var(--color-gold);
         }
-
+ 
         .footer__social svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             stroke: var(--color-cream);
             stroke-width: 1.5;
             fill: none;
         }
-
+ 
         .footer__column h4 {
             font-family: var(--font-body);
             font-size: 0.75rem;
@@ -1070,23 +1204,46 @@
             color: var(--color-cream);
             margin-bottom: var(--space-md);
         }
-
+ 
         .footer__column ul {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
-
+ 
         .footer__column a {
             font-size: 0.9rem;
             color: var(--color-sage-light);
             transition: var(--transition-fast);
         }
-
+ 
         .footer__column a:hover {
-            color: var(--color-cream);
+            color: var(--color-gold-light);
         }
-
+ 
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: var(--space-sm);
+        }
+ 
+        .footer__contact-item svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--color-gold);
+            stroke-width: 2;
+            fill: none;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+ 
+        .footer__contact-item p {
+            font-size: 0.9rem;
+            color: var(--color-sage-light);
+            margin: 0;
+        }
+ 
         .footer__bottom {
             padding-top: var(--space-md);
             border-top: 1px solid var(--color-forest-light);
@@ -1096,97 +1253,102 @@
             flex-wrap: wrap;
             gap: var(--space-sm);
         }
-
+ 
         .footer__copyright {
             font-size: 0.85rem;
             color: var(--color-sage-light);
         }
-
+ 
         .footer__links {
             display: flex;
             gap: var(--space-md);
         }
-
+ 
         .footer__links a {
             font-size: 0.85rem;
             color: var(--color-sage-light);
         }
-
+ 
         .footer__links a:hover {
-            color: var(--color-cream);
+            color: var(--color-gold-light);
         }
-
+ 
         /* ============================================
            MOBILE RESPONSIVE
            ============================================ */
-
+ 
+        @media (max-width: 1200px) {
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+ 
         @media (max-width: 1024px) {
             .nav {
-                padding: 1.25rem 2rem;
+                padding: 1rem 2rem;
             }
-
+ 
             .nav__menu {
                 gap: 1.5rem;
             }
-
+ 
             .about {
                 grid-template-columns: 1fr;
                 gap: var(--space-lg);
             }
-
-            .about__image {
-                height: 400px;
+ 
+            .about__images {
+                height: 450px;
             }
-
-            .features__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gallery__grid {
+ 
+            .gallery-preview {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, 250px);
             }
-
-            .gallery__item:first-child {
+ 
+            .gallery-preview__item:nth-child(1) {
                 grid-column: span 2;
                 grid-row: span 1;
             }
-
-            .experiences__grid {
-                grid-template-columns: repeat(2, 1fr);
+ 
+            .gallery-preview__item:nth-child(2),
+            .gallery-preview__item:nth-child(3),
+            .gallery-preview__item:nth-child(4),
+            .gallery-preview__item:nth-child(5) {
+                grid-column: span 1;
             }
-
-            .experiences__grid .experience-card:last-child {
-                grid-column: span 2;
-            }
-
-            .amenities {
+ 
+            .experience {
                 grid-template-columns: 1fr;
             }
-
-            .amenities__content {
-                position: static;
+ 
+            .experience__image {
+                height: 400px;
             }
-
-            .contact {
+ 
+            .location {
                 grid-template-columns: 1fr;
             }
-
+ 
+            .location__map {
+                height: 400px;
+            }
+ 
             .footer__content {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
+ 
         @media (max-width: 768px) {
             :root {
                 --space-xl: 4rem;
                 --space-2xl: 5rem;
             }
-
+ 
             .nav {
                 padding: 1rem 1.5rem;
             }
-
+ 
             .nav__menu {
                 position: fixed;
                 top: 0;
@@ -1200,98 +1362,135 @@
                 gap: 2rem;
                 transition: var(--transition-smooth);
             }
-
+ 
             .nav__menu.active {
                 right: 0;
             }
-
+ 
             .nav__menu .nav__link {
                 color: var(--color-cream);
                 font-size: 1.25rem;
+                text-shadow: none;
             }
-
+ 
             .nav__toggle {
                 display: flex;
-                z-index: 1001;
             }
-
-            .hero {
-                min-height: 600px;
+ 
+            .hero__stats {
+                flex-wrap: wrap;
             }
-
-            .hero__content {
-                padding: var(--space-sm);
+ 
+            .hero__stat {
+                padding: 1rem 1.5rem;
+                flex: 1 1 33%;
             }
-
-            .about__stats {
-                grid-template-columns: 1fr;
-                gap: var(--space-sm);
+ 
+            .hero__stat-number {
+                font-size: 1.5rem;
             }
-
-            .features__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery__grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(5, 250px);
-            }
-
-            .gallery__item:first-child {
-                grid-column: span 1;
-            }
-
-            .experiences__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experiences__grid .experience-card:last-child {
-                grid-column: span 1;
-            }
-
-            .experience-card {
+ 
+            .about__images {
                 height: 350px;
             }
-
-            .amenities__list {
+ 
+            .about__image-main {
+                width: 85%;
+                height: 75%;
+            }
+ 
+            .about__image-secondary {
+                width: 50%;
+                height: 45%;
+            }
+ 
+            .about__features {
                 grid-template-columns: 1fr;
             }
-
-            .booking__form {
+ 
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+ 
+            .gallery-preview {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 200px);
+            }
+ 
+            .gallery-preview__item:nth-child(1),
+            .gallery-preview__item:nth-child(2),
+            .gallery-preview__item:nth-child(3),
+            .gallery-preview__item:nth-child(4),
+            .gallery-preview__item:nth-child(5) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+ 
+            .experience__content {
+                padding: var(--space-lg);
+            }
+ 
+            .location__highlights {
+                grid-template-columns: 1fr;
+            }
+ 
+            .booking-widget {
                 flex-direction: column;
                 align-items: stretch;
             }
-
-            .booking__input {
-                min-width: 100%;
+ 
+            .booking-widget__field {
+                width: 100%;
             }
-
-            .contact__form-row {
-                grid-template-columns: 1fr;
+ 
+            .booking-widget__input {
+                width: 100%;
             }
-
+ 
+            .booking-widget__submit {
+                width: 100%;
+            }
+ 
             .footer__content {
                 grid-template-columns: 1fr;
                 gap: var(--space-md);
             }
-
+ 
             .footer__bottom {
                 flex-direction: column;
                 text-align: center;
             }
         }
-
+ 
         @media (max-width: 480px) {
             html {
                 font-size: 15px;
             }
-
+ 
             .container {
                 padding: 0 var(--space-sm);
             }
-
+ 
             .section {
                 padding: var(--space-lg) var(--space-sm);
+            }
+ 
+            .hero__logo {
+                width: 140px;
+            }
+ 
+            .hero__cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+ 
+            .hero__cta-group .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+ 
+            .hero__stat {
+                flex: 1 1 50%;
             }
         }
     </style>
@@ -1299,14 +1498,16 @@
 <body>
     <!-- Navigation -->
     <nav class="nav nav--transparent" id="navbar">
-        <a href="#" class="nav__logo">All FORE The View</a>
+        <a href="index.html" class="nav__logo">
+            <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+        </a>
         <ul class="nav__menu" id="navMenu">
-            <li><a href="#about" class="nav__link">About</a></li>
-            <li><a href="#amenities" class="nav__link">Amenities</a></li>
-            <li><a href="#gallery" class="nav__link">Gallery</a></li>
-            <li><a href="#experiences" class="nav__link">Experiences</a></li>
-            <li><a href="#contact" class="nav__link">Contact</a></li>
-            <li><a href="#booking" class="nav__cta">Book Now</a></li>
+            <li><a href="index.html" class="nav__link active">Home</a></li>
+            <li><a href="the-cabin.html" class="nav__link">The Cabin</a></li>
+            <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="the-area.html" class="nav__link">The Area</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+            <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="nav__cta" target="_blank">Book Now</a></li>
         </ul>
         <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span>
@@ -1314,415 +1515,419 @@
             <span></span>
         </button>
     </nav>
-
+ 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero__media">
-            <img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Luxury cabin in the woods" class="hero__image">
+        <div class="hero__slider">
+            <div class="hero__slide active">
+                <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=2080" alt="All FORE The View Cabin Exterior">
+            </div>
+            <div class="hero__slide">
+                <img src="https://l.icdbcdn.com/oh/b8859954-00ac-48ea-b2e0-c561d45b6cc8.jpg?w=2080" alt="Cabin Interior">
+            </div>
+            <div class="hero__slide">
+                <img src="https://l.icdbcdn.com/oh/00e1b5e5-aee0-4363-a794-9bac62cbe506.jpg?w=2080" alt="Living Area">
+            </div>
+            <div class="hero__slide">
+                <img src="https://l.icdbcdn.com/oh/ceab0e8c-5d04-4ba5-9989-bcc29a7066ba.jpg?w=2080" alt="Bedroom">
+            </div>
         </div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
-            <span class="hero__label">Luxury Cabin Retreat</span>
+            <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View Logo" class="hero__logo">
             <h1 class="hero__title">All FORE The View</h1>
-            <p class="hero__subtitle">Escape to serenity in our stunning 3,389 sq ft woodland retreat</p>
-            <a href="#booking" class="hero__cta">
-                Reserve Your Stay
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+            <p class="hero__subtitle">Your peaceful woodland escape in the heart of Oklahoma</p>
+            <div class="hero__location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
                 </svg>
-            </a>
+                Broken Bow, Oklahoma
+            </div>
+            <div class="hero__cta-group">
+                <a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="btn btn--primary" target="_blank">
+                    Book Your Stay
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="the-cabin.html" class="btn btn--white">Explore The Cabin</a>
+            </div>
         </div>
-        <div class="hero__scroll">
-            <span>Scroll</span>
-            <div class="hero__scroll-line"></div>
+        <div class="hero__stats">
+            <div class="hero__stat">
+                <div class="hero__stat-number">3,389</div>
+                <div class="hero__stat-label">Square Feet</div>
+            </div>
+            <div class="hero__stat">
+                <div class="hero__stat-number">16</div>
+                <div class="hero__stat-label">Guests</div>
+            </div>
+            <div class="hero__stat">
+                <div class="hero__stat-number">3</div>
+                <div class="hero__stat-label">King Beds</div>
+            </div>
+            <div class="hero__stat">
+                <div class="hero__stat-number">1+</div>
+                <div class="hero__stat-label">Acres</div>
+            </div>
         </div>
     </section>
-
+ 
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="about">
-                <div class="about__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518732714860-b62714ce0c59?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cabin interior with fireplace" class="about__image">
-                    <div class="about__image-accent"></div>
+                <div class="about__images" data-aos="fade-right">
+                    <img src="https://l.icdbcdn.com/oh/b8859954-00ac-48ea-b2e0-c561d45b6cc8.jpg?w=1200" alt="Cabin Interior" class="about__image-main">
+                    <img src="https://l.icdbcdn.com/oh/cc08a8e9-7b5d-454f-9d2d-4094dbff2d7b.jpg?w=800" alt="Amenities" class="about__image-secondary">
+                    <div class="about__accent"></div>
                 </div>
-                <div class="about__content">
-                    <span class="section-label">Welcome</span>
-                    <h2>Your Woodland Sanctuary Awaits</h2>
-                    <p class="lead">Nestled on over an acre of serene woods, All FORE The View offers an unparalleled escape from the ordinary. This stunning 3,389 square foot cabin rental provides the perfect backdrop for unforgettable gatherings with family and friends.</p>
-                    <p>Experience the perfect blend of rustic charm and modern luxury. Our thoughtfully designed retreat features three king beds, a fully-stocked gourmet kitchen, and a master bathroom with a spectacular double-shower that will make you never want to leave.</p>
-                    <p>Whether you're planning a family reunion, a weekend getaway with friends, or a peaceful retreat into nature, our cabin provides everything you need for an extraordinary stay.</p>
-                    <div class="about__stats">
-                        <div class="about__stat">
-                            <div class="about__stat-number">3,389</div>
-                            <div class="about__stat-label">Square Feet</div>
+                <div class="about__content" data-aos="fade-left">
+                    <span class="section-label">Welcome to Your Escape</span>
+                    <h2>A Spacious Modern Cabin Retreat</h2>
+                    <p class="lead">Nestled on over an acre of serene woods near Hochatown, Oklahoma, All FORE The View offers an unparalleled escape from the ordinary.</p>
+                    <p>This stunning 3,389 square foot cabin provides the perfect backdrop for unforgettable gatherings with family and friends. Experience the welcoming, peaceful atmosphere you've been seeking, with modern amenities and rustic charm perfectly blended.</p>
+                    <p>Located less than a mile from Hochatown Square, you'll have easy access to local attractions while enjoying complete privacy in your woodland retreat.</p>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                            </div>
+                            <span>3,389 Sq Ft Living Space</span>
                         </div>
-                        <div class="about__stat">
-                            <div class="about__stat-number">16</div>
-                            <div class="about__stat-label">Guests</div>
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span>Sleeps Up to 16 Guests</span>
                         </div>
-                        <div class="about__stat">
-                            <div class="about__stat-number">1+</div>
-                            <div class="about__stat-label">Acre of Woods</div>
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                            </div>
+                            <span>3 King Bedrooms</span>
+                        </div>
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                            </div>
+                            <span>Over 1 Acre of Woods</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="section section--cream" id="amenities">
+ 
+    <!-- Amenities Section -->
+    <section class="section section--cream">
         <div class="container">
-            <div class="section__header">
+            <div class="section__header" data-aos="fade-up">
                 <span class="section-label">What We Offer</span>
                 <h2>Premium Amenities</h2>
                 <p>Every detail has been thoughtfully considered to ensure your stay is nothing short of extraordinary.</p>
             </div>
-            <div class="features__grid">
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <polyline points="9 22 9 12 15 12 15 22"/>
-                        </svg>
-                    </div>
-                    <h4>Spacious Living</h4>
-                    <p>3,389 sq ft of thoughtfully designed living space perfect for groups</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M2 4v16"/>
-                            <path d="M2 8h18a2 2 0 0 1 2 2v10"/>
-                            <path d="M2 17h20"/>
-                            <path d="M6 8v9"/>
-                        </svg>
-                    </div>
-                    <h4>King Bedrooms</h4>
-                    <p>Three luxurious king beds ensuring restful nights for all guests</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M3 3h18v18H3zM12 8v8M8 12h8"/>
-                        </svg>
-                    </div>
-                    <h4>Gourmet Kitchen</h4>
-                    <p>Fully-stocked kitchen with premium appliances for culinary adventures</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
+            <div class="amenities-grid">
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="amenity-card__icon">
                         <svg viewBox="0 0 24 24">
                             <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
                             <line x1="4" y1="22" x2="4" y2="15"/>
                         </svg>
                     </div>
-                    <h4>Entertainment</h4>
-                    <p>Cozy fireplace and entertainment system for memorable evenings</p>
+                    <h4>Cozy Fireplaces</h4>
+                    <p>Indoor and outdoor gas fireplaces for warm, memorable evenings</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h4>Flexible Check-in</h4>
-                    <p>Self check-in available for your convenience</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="amenity-card__icon">
                         <svg viewBox="0 0 24 24">
                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                         </svg>
                     </div>
-                    <h4>Spa Bathroom</h4>
-                    <p>Master bathroom with luxurious double-shower experience</p>
+                    <h4>Hot Tub</h4>
+                    <p>Relax under the stars in your private hot tub</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="amenity-card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 3h18v18H3zM12 8v8M8 12h8"/>
+                        </svg>
+                    </div>
+                    <h4>Gourmet Kitchen</h4>
+                    <p>Fully-stocked kitchen with premium cookware and appliances</p>
+                </div>
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="amenity-card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h4>Smart Entertainment</h4>
+                    <p>Smart TVs with streaming apps, Apple AirPlay & DirecTV</p>
+                </div>
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="amenity-card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </div>
+                    <h4>Propane Grill</h4>
+                    <p>Outdoor grilling station for family cookouts</p>
+                </div>
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="amenity-card__icon">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
                             <path d="M20 10a8 8 0 1 0-8 8v-8h8z"/>
                         </svg>
                     </div>
                     <h4>High-Speed WiFi</h4>
-                    <p>Stay connected with reliable high-speed internet throughout</p>
+                    <p>Stay connected throughout your stay</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-card__icon">
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="amenity-card__icon">
                         <svg viewBox="0 0 24 24">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                         </svg>
                     </div>
-                    <h4>Private Setting</h4>
-                    <p>Over an acre of serene woodland for complete privacy</p>
+                    <h4>Spa Bathroom</h4>
+                    <p>Master bath with double-shower and stand-alone tub</p>
+                </div>
+                <div class="amenity-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="amenity-card__icon">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h4>Campfire Area</h4>
+                    <p>Outdoor fire pit for stargazing and s'mores</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section -->
-    <section class="section" id="gallery">
+ 
+    <!-- Gallery Preview Section -->
+    <section class="section">
         <div class="container">
-            <div class="section__header">
+            <div class="section__header" data-aos="fade-up">
                 <span class="section-label">Take a Look</span>
                 <h2>Gallery</h2>
                 <p>Explore our beautiful cabin through these carefully curated images.</p>
             </div>
-            <div class="gallery__grid">
-                <div class="gallery__item">
-                    <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Main living area">
-                    <div class="gallery__item-overlay">
-                        <span class="gallery__item-label">Living Room</span>
+            <div class="gallery-preview">
+                <a href="gallery.html" class="gallery-preview__item" data-aos="fade-up">
+                    <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=1200" alt="Cabin Exterior">
+                    <div class="gallery-preview__overlay">
+                        <span class="gallery-preview__label">Cabin Exterior</span>
                     </div>
-                </div>
-                <div class="gallery__item">
-                    <img src="https://images.unsplash.com/photo-1595514736018-eb9a58e67cd4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cozy bedroom">
-                    <div class="gallery__item-overlay">
-                        <span class="gallery__item-label">Master Bedroom</span>
+                </a>
+                <a href="gallery.html" class="gallery-preview__item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://l.icdbcdn.com/oh/b8859954-00ac-48ea-b2e0-c561d45b6cc8.jpg?w=800" alt="Interior">
+                    <div class="gallery-preview__overlay">
+                        <span class="gallery-preview__label">Living Space</span>
                     </div>
-                </div>
-                <div class="gallery__item">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern kitchen">
-                    <div class="gallery__item-overlay">
-                        <span class="gallery__item-label">Gourmet Kitchen</span>
+                </a>
+                <a href="gallery.html" class="gallery-preview__item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://l.icdbcdn.com/oh/ceab0e8c-5d04-4ba5-9989-bcc29a7066ba.jpg?w=800" alt="Bedroom">
+                    <div class="gallery-preview__overlay">
+                        <span class="gallery-preview__label">Master Bedroom</span>
                     </div>
-                </div>
-                <div class="gallery__item">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outdoor deck">
-                    <div class="gallery__item-overlay">
-                        <span class="gallery__item-label">Outdoor Deck</span>
+                </a>
+                <a href="gallery.html" class="gallery-preview__item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://l.icdbcdn.com/oh/00e1b5e5-aee0-4363-a794-9bac62cbe506.jpg?w=800" alt="Living Area">
+                    <div class="gallery-preview__overlay">
+                        <span class="gallery-preview__label">Living Area</span>
                     </div>
-                </div>
-                <div class="gallery__item">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Bathroom">
-                    <div class="gallery__item-overlay">
-                        <span class="gallery__item-label">Spa Bathroom</span>
+                </a>
+                <a href="gallery.html" class="gallery-preview__item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://l.icdbcdn.com/oh/cc08a8e9-7b5d-454f-9d2d-4094dbff2d7b.jpg?w=800" alt="More Photos">
+                    <div class="gallery-preview__more">
+                        <span class="gallery-preview__more-number">20+</span>
+                        <span class="gallery-preview__more-text">View All Photos</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
-
-    <!-- Experiences Section -->
-    <section class="section section--cream" id="experiences">
-        <div class="container">
-            <div class="section__header">
-                <span class="section-label">Local Attractions</span>
-                <h2>Discover the Area</h2>
-                <p>From outdoor adventures to local dining, there's something for everyone.</p>
-            </div>
-            <div class="experiences__grid">
-                <div class="experience-card">
-                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hiking trails" class="experience-card__image">
-                    <div class="experience-card__overlay">
-                        <div class="experience-card__content">
-                            <h3>Hiking Trails</h3>
-                            <p>Explore miles of scenic trails through pristine wilderness right from your doorstep.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Outdoor activities" class="experience-card__image">
-                    <div class="experience-card__overlay">
-                        <div class="experience-card__content">
-                            <h3>Outdoor Activities</h3>
-                            <p>Golf, fishing, kayaking and more adventure awaits in the surrounding area.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Local dining" class="experience-card__image">
-                    <div class="experience-card__overlay">
-                        <div class="experience-card__content">
-                            <h3>Local Dining</h3>
-                            <p>Discover charming restaurants and local eateries featuring regional cuisine.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ 
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="experience__image" data-aos="fade-right">
+            <img src="https://l.icdbcdn.com/oh/47e49ee1-0cbd-4c30-81c0-ef87ed340d26.jpg?w=1200" alt="Property Overview">
+        </div>
+        <div class="experience__content" data-aos="fade-left">
+            <span class="section-label">Your Stay</span>
+            <h2>The Perfect Getaway Experience</h2>
+            <p>Whether you're planning a family reunion, a weekend getaway with friends, or a peaceful retreat into nature, our cabin provides everything you need for an extraordinary stay.</p>
+            <ul class="experience__list">
+                <li class="experience__item">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Self check-in with keyless entry for your convenience
+                </li>
+                <li class="experience__item">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Personally managed by owners TJ, Stacy, Blake & Lesley
+                </li>
+                <li class="experience__item">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Less than a mile from Hochatown Square
+                </li>
+                <li class="experience__item">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    Secluded woodland setting on over 1 acre
+                </li>
+                <li class="experience__item">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    All linens, towels, and essentials provided
+                </li>
+            </ul>
+            <a href="the-cabin.html" class="btn btn--primary">View Cabin Details</a>
         </div>
     </section>
-
-    <!-- Amenities List Section -->
-    <section class="section section--forest">
-        <div class="container">
-            <div class="amenities">
-                <div class="amenities__content">
-                    <span class="section-label">The Details</span>
-                    <h2>Everything You Need</h2>
-                    <p>We've thought of everything to make your stay comfortable and memorable. From premium bedding to a fully-equipped kitchen, every detail has been carefully considered.</p>
-                </div>
-                <div class="amenities__list">
-                    <div class="amenities__category">
-                        <h4>Sleeping</h4>
-                        <ul>
-                            <li>3 King Beds</li>
-                            <li>Premium Linens</li>
-                            <li>Extra Blankets</li>
-                            <li>Sleeps 16 Guests</li>
-                        </ul>
-                    </div>
-                    <div class="amenities__category">
-                        <h4>Kitchen</h4>
-                        <ul>
-                            <li>Full-Size Appliances</li>
-                            <li>Cookware & Utensils</li>
-                            <li>Coffee Maker</li>
-                            <li>Dishwasher</li>
-                        </ul>
-                    </div>
-                    <div class="amenities__category">
-                        <h4>Living Spaces</h4>
-                        <ul>
-                            <li>Entertainment Fireplace</li>
-                            <li>Smart TV</li>
-                            <li>Board Games</li>
-                            <li>Comfortable Seating</li>
-                        </ul>
-                    </div>
-                    <div class="amenities__category">
-                        <h4>Outdoors</h4>
-                        <ul>
-                            <li>Private Deck</li>
-                            <li>Scenic Views</li>
-                            <li>Fire Pit Area</li>
-                            <li>Outdoor Seating</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+ 
+    <!-- Booking CTA Section -->
+    <section class="booking-cta">
+        <div class="booking-cta__bg">
+            <img src="https://l.icdbcdn.com/oh/d536227c-6631-4699-aeef-c7b8e014b366.jpg?w=2080" alt="Cabin View">
         </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="section">
-        <div class="container">
-            <div class="testimonial">
-                <p class="testimonial__quote">An absolutely magical retreat! The cabin exceeded all our expectations. The views were breathtaking, the amenities were top-notch, and we made memories that will last a lifetime.</p>
-                <p class="testimonial__author">The Johnson Family</p>
-                <p class="testimonial__location">Nashville, Tennessee</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="booking__bg">
-            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Cabin exterior">
-        </div>
-        <div class="booking__overlay"></div>
-        <div class="booking__content">
+        <div class="booking-cta__overlay"></div>
+        <div class="booking-cta__content" data-aos="fade-up">
             <span class="section-label">Reserve Your Escape</span>
             <h2>Book Your Stay</h2>
             <p>Ready to experience All FORE The View? Check availability and secure your dates for an unforgettable woodland retreat.</p>
-            <form class="booking__form">
-                <input type="date" class="booking__input" placeholder="Check-in" aria-label="Check-in date">
-                <input type="date" class="booking__input" placeholder="Check-out" aria-label="Check-out date">
-                <select class="booking__input" aria-label="Number of guests">
-                    <option value="">Guests</option>
-                    <option value="2">2 Guests</option>
-                    <option value="4">4 Guests</option>
-                    <option value="6">6 Guests</option>
-                    <option value="8">8 Guests</option>
-                    <option value="10">10 Guests</option>
-                    <option value="12">12 Guests</option>
-                    <option value="14">14 Guests</option>
-                    <option value="16">16 Guests</option>
-                </select>
-                <button type="submit" class="booking__submit">Check Availability</button>
-            </form>
-            <p class="booking__note">Instant confirmation available for most dates</p>
+            <div class="booking-widget">
+                <div class="booking-widget__field">
+                    <label class="booking-widget__label">Check In</label>
+                    <input type="date" class="booking-widget__input" id="checkin">
+                </div>
+                <div class="booking-widget__field">
+                    <label class="booking-widget__label">Check Out</label>
+                    <input type="date" class="booking-widget__input" id="checkout">
+                </div>
+                <div class="booking-widget__field">
+                    <label class="booking-widget__label">Guests</label>
+                    <select class="booking-widget__input" id="guests">
+                        <option value="2">2 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="10">10 Guests</option>
+                        <option value="12">12 Guests</option>
+                        <option value="14">14 Guests</option>
+                        <option value="16">16 Guests</option>
+                    </select>
+                </div>
+                <a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="booking-widget__submit" target="_blank">Check Availability</a>
+            </div>
+            <p class="booking-cta__note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Check-in: 4:00 PM CST | Check-out: 11:00 AM CST
+            </p>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section class="section section--cream" id="contact">
+ 
+    <!-- Location Section -->
+    <section class="section section--cream">
         <div class="container">
-            <div class="contact">
-                <div class="contact__info">
-                    <span class="section-label">Get in Touch</span>
-                    <h2>Contact Us</h2>
-                    <p>Have questions about All FORE The View? We'd love to hear from you. Reach out and we'll respond as soon as we can.</p>
-                    <div class="contact__details">
-                        <div class="contact__item">
-                            <div class="contact__item-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
+            <div class="location">
+                <div class="location__content" data-aos="fade-right">
+                    <span class="section-label">Location</span>
+                    <h2>Discover Broken Bow</h2>
+                    <p class="lead">Our cabin is perfectly positioned to offer both peaceful seclusion and easy access to local attractions.</p>
+                    <p>Located at 1217 N Lukfata Trail Road in Broken Bow, Oklahoma, you'll find yourself immersed in nature while being just minutes from restaurants, shops, and outdoor adventures.</p>
+                    <div class="location__highlights">
+                        <div class="location__highlight">
+                            <div class="location__highlight-icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                             </div>
-                            <div class="contact__item-content">
-                                <h4>Location</h4>
-                                <p>Nestled in the serene woods</p>
+                            <div class="location__highlight-text">
+                                <h4>Hochatown Square</h4>
+                                <p>Less than 1 mile away</p>
                             </div>
                         </div>
-                        <div class="contact__item">
-                            <div class="contact__item-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
+                        <div class="location__highlight">
+                            <div class="location__highlight-icon">
+                                <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
                             </div>
-                            <div class="contact__item-content">
-                                <h4>Email</h4>
-                                <p>hello@allforetheview.com</p>
+                            <div class="location__highlight-text">
+                                <h4>Local Breweries</h4>
+                                <p>Mountain Fork Brewery nearby</p>
                             </div>
                         </div>
-                        <div class="contact__item">
-                            <div class="contact__item-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
+                        <div class="location__highlight">
+                            <div class="location__highlight-icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
-                            <div class="contact__item-content">
-                                <h4>Phone</h4>
-                                <p>Available upon booking</p>
+                            <div class="location__highlight-text">
+                                <h4>Beavers Bend</h4>
+                                <p>State Park nearby</p>
+                            </div>
+                        </div>
+                        <div class="location__highlight">
+                            <div class="location__highlight-icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <div class="location__highlight-text">
+                                <h4>Outdoor Adventures</h4>
+                                <p>Hiking, fishing & more</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form class="contact__form">
-                    <div class="contact__form-row">
-                        <input type="text" class="contact__input" placeholder="First Name" required>
-                        <input type="text" class="contact__input" placeholder="Last Name" required>
+                <div class="location__map" data-aos="fade-left">
+                    <img src="https://l.icdbcdn.com/oh/64331a23-d363-44de-8ee4-063b4efe67d3.jpg?w=1200" alt="Location">
+                    <div class="location__map-overlay">
+                        <a href="the-area.html" class="location__map-pin">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </a>
                     </div>
-                    <input type="email" class="contact__input" placeholder="Email Address" required>
-                    <input type="text" class="contact__input" placeholder="Subject">
-                    <textarea class="contact__textarea" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="contact__submit">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <h3>All FORE The View</h3>
-                    <p>Your luxury woodland retreat awaits. Experience the perfect blend of rustic charm and modern comfort nestled in over an acre of serene woods.</p>
+                    <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+                    <p>Your luxury woodland retreat in Broken Bow, Oklahoma. Experience the perfect blend of rustic charm and modern comfort nestled in over an acre of serene woods.</p>
                     <div class="footer__social">
-                        <a href="#" aria-label="Facebook">
+                        <a href="https://facebook.com/allforetheview" aria-label="Facebook" target="_blank">
                             <svg viewBox="0 0 24 24">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://instagram.com/allforetheview" aria-label="Instagram" target="_blank">
                             <svg viewBox="0 0 24 24">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Pinterest">
+                        <a href="https://youtube.com/allforetheview" aria-label="YouTube" target="_blank">
                             <svg viewBox="0 0 24 24">
-                                <path d="M8 12a4 4 0 1 1 8 0c0 4-8 4-8 8"/>
-                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
                             </svg>
                         </a>
                     </div>
@@ -1730,29 +1935,32 @@
                 <div class="footer__column">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#amenities">Amenities</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="the-cabin.html">The Cabin</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="the-area.html">The Area</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">
                     <h4>Information</h4>
                     <ul>
-                        <li><a href="#booking">Rates</a></li>
-                        <li><a href="#booking">Availability</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">House Rules</a></li>
+                        <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" target="_blank">Book Now</a></li>
+                        <li><a href="the-cabin.html#policies">House Rules</a></li>
+                        <li><a href="the-cabin.html#amenities">Amenities</a></li>
+                        <li><a href="the-area.html">Directions</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Cancellation Policy</a></li>
-                        <li><a href="#">Directions</a></li>
-                        <li><a href="#">Local Tips</a></li>
-                    </ul>
+                    <h4>Contact Us</h4>
+                    <div class="footer__contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <p>(817) 382-2228</p>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <p>1217 N Lukfata Trail Road<br>Broken Bow, OK 74728</p>
+                    </div>
                 </div>
             </div>
             <div class="footer__bottom">
@@ -1764,15 +1972,25 @@
             </div>
         </div>
     </footer>
-
+ 
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
     <!-- JavaScript -->
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+ 
         // Navigation scroll effect
         const navbar = document.getElementById('navbar');
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
-
-        // Handle scroll
+ 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 navbar.classList.remove('nav--transparent');
@@ -1782,19 +2000,33 @@
                 navbar.classList.add('nav--transparent');
             }
         });
-
+ 
         // Mobile menu toggle
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
-
+ 
         // Close mobile menu on link click
-        document.querySelectorAll('.nav__link').forEach(link => {
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
-
+ 
+        // Hero slider
+        const slides = document.querySelectorAll('.hero__slide');
+        let currentSlide = 0;
+ 
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+ 
+        setInterval(nextSlide, 5000);
+ 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1804,7 +2036,7 @@
                     const headerOffset = 80;
                     const elementPosition = target.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
+ 
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
@@ -1812,13 +2044,14 @@
                 }
             });
         });
-
-        // Form submission handling (placeholder)
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thank you for your inquiry! We will get back to you soon.');
-            });
+ 
+        // Set minimum dates for booking widget
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('checkin').setAttribute('min', today);
+        document.getElementById('checkout').setAttribute('min', today);
+ 
+        document.getElementById('checkin').addEventListener('change', function() {
+            document.getElementById('checkout').setAttribute('min', this.value);
         });
     </script>
 </body>
