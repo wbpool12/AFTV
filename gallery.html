@@ -128,5 +128,74 @@ then paste them into this grid (copy one of the blocks above).
 </div>
 
 <script src="assets/site.js"></script>
+  <script>
+const IMAGES = [
+{
+file: "1 All FORE The View Cabin.jpg",
+cat: "exterior",
+caption: "All FORE The View Cabin – Exterior"
+},
+{
+file: "1 Front Porch View.jpg",
+cat: "exterior",
+caption: "Front Porch View"
+},
+{
+file: "1 Back Patio.jpg",
+cat: "outdoor",
+caption: "Back Patio"
+},
+{
+file: "1 Back Patio Full.jpg",
+cat: "outdoor",
+caption: "Back Patio – Full View"
+},
+{
+file: "1 Back Patio Table and Grill.jpg",
+cat: "outdoor",
+caption: "Back Patio Table and Grill"
+},
+{
+file: "1 Swing Garden.jpg",
+cat: "outdoor",
+caption: "Swing Garden"
+},
+{
+file: "1 Swing Garden House View.jpg",
+cat: "outdoor",
+caption: "Swing Garden – House View"
+},
+{
+file: "1 Swing Garden Swing Bed.jpg",
+cat: "outdoor",
+caption: "Swing Garden Swing Bed"
+}
+];
+
+const gallery = document.getElementById("gallery");
+
+function renderGallery(list) {
+gallery.innerHTML = "";
+list.forEach(item => {
+const src = `assets/gallery/${item.file}`;
+
+const a = document.createElement("a");
+a.className = "photo";
+a.dataset.cat = item.cat;
+a.href = src;
+
+const img = document.createElement("img");
+img.src = src;
+img.alt = item.caption;
+img.loading = "lazy";
+
+a.appendChild(img);
+gallery.appendChild(a);
+});
+}
+
+renderGallery(IMAGES);
+</script>
+
 </body>
 </html>
