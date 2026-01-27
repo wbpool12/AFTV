@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact All FORE The View cabin rental in Broken Bow, Oklahoma. Get in touch with questions about your stay.">
+    <title>Contact | All FORE The View | Broken Bow, Oklahoma</title>
+    <link rel="icon" type="image/png" href="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-forest: #2C3E2D;
+            --color-forest-dark: #1a2a1b;
+            --color-forest-light: #3d5240;
+            --color-sage: #8B9A7D;
+            --color-sage-light: #a8b49d;
+            --color-cream: #F5F2EB;
+            --color-cream-dark: #E8E4D9;
+            --color-warm-white: #FDFCFA;
+            --color-charcoal: #2D2D2D;
+            --color-charcoal-light: #4A4A4A;
+            --color-gold: #B8956B;
+            --color-gold-light: #D4B896;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', -apple-system, sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); font-weight: 400; line-height: 1.7; color: var(--color-charcoal); background-color: var(--color-warm-white); overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+        ul { list-style: none; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 500; line-height: 1.2; color: var(--color-forest-dark); }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        p { font-size: 1rem; color: var(--color-charcoal-light); max-width: 65ch; }
+        .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-sage); margin-bottom: var(--space-sm); display: block; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: none; cursor: pointer; transition: var(--transition-smooth); }
+        .btn--primary { background: var(--color-gold); color: var(--color-warm-white); }
+        .btn--primary:hover { background: var(--color-gold-light); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+
+        /* Navigation */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(253, 252, 250, 0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
+        .nav__logo img { height: 40px; width: auto; }
+        .nav__menu { display: flex; align-items: center; gap: 2rem; }
+        .nav__link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-charcoal); position: relative; padding: 0.5rem 0; }
+        .nav__link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-gold); transition: var(--transition-fast); }
+        .nav__link:hover::after, .nav__link.active::after { width: 100%; }
+        .nav__cta { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.875rem 1.5rem; background: var(--color-gold); color: var(--color-warm-white); }
+        .nav__cta:hover { background: var(--color-gold-light); transform: translateY(-2px); }
+        .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+        .nav__toggle span { width: 24px; height: 2px; background: var(--color-charcoal); transition: var(--transition-fast); }
+
+        /* Page Header */
+        .page-header { position: relative; height: 50vh; min-height: 350px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 70px; }
+        .page-header__bg { position: absolute; inset: 0; z-index: -2; }
+        .page-header__bg img { width: 100%; height: 100%; object-fit: cover; }
+        .page-header__overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26, 42, 27, 0.4), rgba(26, 42, 27, 0.7)); z-index: -1; }
+        .page-header__content { text-align: center; padding: var(--space-md); }
+        .page-header__content .section-label { color: var(--color-gold-light); }
+        .page-header__content h1 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .page-header__content p { color: var(--color-cream); font-size: 1.125rem; margin: 0 auto; max-width: 600px; }
+
+        /* Section */
+        .section { padding: var(--space-xl) var(--space-md); }
+        .section--cream { background: var(--color-cream); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); }
+
+        /* Contact Grid */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-xl); }
+        .contact-info h2 { margin-bottom: var(--space-md); }
+        .contact-info > p { margin-bottom: var(--space-lg); }
+
+        /* Contact Cards */
+        .contact-cards { display: flex; flex-direction: column; gap: var(--space-md); }
+        .contact-card { display: flex; align-items: flex-start; gap: var(--space-sm); padding: var(--space-md); background: var(--color-cream); transition: var(--transition-smooth); }
+        .contact-card:hover { transform: translateX(5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .contact-card__icon { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--color-forest); border-radius: 50%; flex-shrink: 0; }
+        .contact-card__icon svg { width: 24px; height: 24px; stroke: var(--color-gold-light); stroke-width: 2; fill: none; }
+        .contact-card__content h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 0.25rem; }
+        .contact-card__content p { font-size: 1rem; color: var(--color-charcoal); margin: 0; }
+        .contact-card__content a { color: var(--color-forest); font-weight: 500; }
+        .contact-card__content a:hover { color: var(--color-gold); }
+
+        /* Social Links */
+        .social-links { margin-top: var(--space-lg); }
+        .social-links h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-bottom: var(--space-sm); }
+        .social-links__list { display: flex; gap: var(--space-sm); }
+        .social-links__item { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--color-forest); transition: var(--transition-smooth); }
+        .social-links__item:hover { background: var(--color-gold); transform: translateY(-3px); }
+        .social-links__item svg { width: 22px; height: 22px; stroke: var(--color-warm-white); stroke-width: 1.5; fill: none; }
+
+        /* Contact Form */
+        .contact-form { background: var(--color-warm-white); padding: var(--space-lg); border: 1px solid var(--color-cream-dark); }
+        .contact-form h3 { margin-bottom: var(--space-md); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-sm); }
+        .form-group { margin-bottom: var(--space-sm); }
+        .form-group label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 0.5rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 1rem 1.25rem; font-family: var(--font-body); font-size: 0.95rem; border: 1px solid var(--color-cream-dark); background: var(--color-warm-white); color: var(--color-charcoal); transition: var(--transition-fast); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--color-sage); }
+        .form-group textarea { min-height: 150px; resize: vertical; }
+        .form-submit { width: 100%; padding: 1.125rem 2rem; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--color-forest); color: var(--color-warm-white); border: none; cursor: pointer; transition: var(--transition-smooth); margin-top: var(--space-sm); }
+        .form-submit:hover { background: var(--color-forest-light); transform: translateY(-2px); }
+
+        /* Owners Section */
+        .owners { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+        .owners__content h2 { margin-bottom: var(--space-md); }
+        .owners__content p { margin-bottom: var(--space-sm); }
+        .owners__names { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+        .owners__name { background: var(--color-forest); color: var(--color-cream); padding: 0.75rem 1.5rem; font-size: 0.9rem; font-weight: 500; }
+        .owners__image { position: relative; height: 400px; }
+        .owners__image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* FAQ Section */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--color-cream-dark); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: var(--space-md) 0; background: none; border: none; cursor: pointer; text-align: left; }
+        .faq-question h4 { font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-forest-dark); margin: 0; }
+        .faq-question svg { width: 24px; height: 24px; stroke: var(--color-sage); stroke-width: 2; fill: none; transition: var(--transition-fast); flex-shrink: 0; }
+        .faq-item.active .faq-question svg { transform: rotate(180deg); stroke: var(--color-gold); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-answer p { padding-bottom: var(--space-md); color: var(--color-charcoal-light); }
+
+        /* Footer */
+        .footer { background: var(--color-forest-dark); color: var(--color-cream); padding: var(--space-lg) var(--space-md); }
+        .footer__content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); }
+        .footer__brand img { height: 50px; }
+        .footer__links { display: flex; gap: var(--space-md); }
+        .footer__links a { font-size: 0.85rem; color: var(--color-sage-light); }
+        .footer__links a:hover { color: var(--color-gold-light); }
+        .footer__copyright { font-size: 0.85rem; color: var(--color-sage-light); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .owners { grid-template-columns: 1fr; }
+            .owners__image { height: 300px; }
+        }
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.5rem; }
+            .nav__menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--color-forest-dark); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transition: var(--transition-smooth); }
+            .nav__menu.active { right: 0; }
+            .nav__menu .nav__link { color: var(--color-cream); font-size: 1.25rem; }
+            .nav__toggle { display: flex; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer__content { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav__logo">
+            <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+        </a>
+        <ul class="nav__menu" id="navMenu">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="the-cabin.html" class="nav__link">The Cabin</a></li>
+            <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="the-area.html" class="nav__link">The Area</a></li>
+            <li><a href="contact.html" class="nav__link active">Contact</a></li>
+            <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="nav__cta" target="_blank">Book Now</a></li>
+        </ul>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__bg">
+            <img src="https://l.icdbcdn.com/oh/cc08a8e9-7b5d-454f-9d2d-4094dbff2d7b.jpg?w=2080" alt="Cabin Amenities">
+        </div>
+        <div class="page-header__overlay"></div>
+        <div class="page-header__content">
+            <span class="section-label">Get In Touch</span>
+            <h1>Contact Us</h1>
+            <p>Have questions about All FORE The View? We'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-label">Reach Out</span>
+                    <h2>We're Here to Help</h2>
+                    <p>Whether you have questions about the cabin, need help with your booking, or just want to learn more about your upcoming stay, don't hesitate to reach out. We're personally invested in making your experience unforgettable.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card__icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-card__content">
+                                <h4>Phone</h4>
+                                <p><a href="tel:8173822228">(817) 382-2228</a></p>
+                                <p style="font-size: 0.85rem; color: var(--color-sage); margin-top: 0.25rem;">Call or text anytime</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card__icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="contact-card__content">
+                                <h4>Location</h4>
+                                <p>1217 N Lukfata Trail Road<br>Broken Bow, OK 74728</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card__icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div class="contact-card__content">
+                                <h4>Check-In / Check-Out</h4>
+                                <p>Check-in: 4:00 PM CST<br>Check-out: 11:00 AM CST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-links__list">
+                            <a href="https://facebook.com/allforetheview" class="social-links__item" target="_blank" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            </a>
+                            <a href="https://instagram.com/allforetheview" class="social-links__item" target="_blank" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            </a>
+                            <a href="https://youtube.com/allforetheview" class="social-links__item" target="_blank" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select a topic</option>
+                                <option value="booking">Booking Inquiry</option>
+                                <option value="amenities">Questions About Amenities</option>
+                                <option value="directions">Directions & Location</option>
+                                <option value="special">Special Requests</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owners Section -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="owners">
+                <div class="owners__content" data-aos="fade-right">
+                    <span class="section-label">Your Hosts</span>
+                    <h2>Personally Managed by the Owners</h2>
+                    <p>Unlike many rental properties managed by large companies, All FORE The View is personally owned and managed by our family. We take pride in every detail and are committed to making your stay exceptional.</p>
+                    <p>When you book with us, you're not just a reservation number - you're our guest. We're always available to answer questions, provide recommendations, and ensure your experience exceeds expectations.</p>
+                    <div class="owners__names">
+                        <span class="owners__name">TJ</span>
+                        <span class="owners__name">Stacy</span>
+                        <span class="owners__name">Blake</span>
+                        <span class="owners__name">Lesley</span>
+                    </div>
+                </div>
+                <div class="owners__image" data-aos="fade-left">
+                    <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=800" alt="All FORE The View Cabin">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" style="margin-bottom: var(--space-lg);" data-aos="fade-up">
+                <span class="section-label">Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list" data-aos="fade-up">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>What time is check-in and check-out?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Check-in is at 4:00 PM CST or later, and check-out is at 11:00 AM CST. We offer self check-in via keyless entry - your code will be the last 4 digits of your booking phone number.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>How many guests can the cabin accommodate?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The cabin sleeps up to 16 guests comfortably with 3 king-sized beds. Additional guests beyond the stated capacity can be accommodated for $20 per person per night (up to 4 additional guests). Children under 3 are free.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Are pets allowed?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We do not allow pets at the cabin. However, licensed service animals are permitted with advance notice and a $25 per night fee. Please contact us before booking if you have a service animal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>What is the cancellation policy?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cancellations 30+ days before arrival receive a full refund minus a $100 fee. Cancellations 15-29 days out receive a 50% refund. Cancellations within 14 days receive a 25% refund. No refunds for no-shows or early departures.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>Is there WiFi at the cabin?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! WiFi is included. The network name is "allforetheview" and the password is "DoubleEagle". Please note that internet speeds in rural areas are slower than urban areas and may not be suitable for gaming or heavy streaming.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h4>What should I bring?</h4>
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide linens, towels, cookware, dishes, and basic essentials. You should bring: insect repellent, coffee pods/grounds, condiments, personal toiletries, food & beverages, fire starters, firewood, beach towels, and life jackets if you plan to go boating.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html" class="footer__brand">
+                    <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+                </a>
+                <div class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="the-cabin.html">The Cabin</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="the-area.html">The Area</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 All FORE The View. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+
+        // Navigation
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

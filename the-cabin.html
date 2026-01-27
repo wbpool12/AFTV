@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore All FORE The View cabin details - 3,389 sq ft of luxury, 3 king beds, spa bathroom, hot tub, gourmet kitchen and more in Broken Bow, Oklahoma.">
+    <title>The Cabin | All FORE The View | Broken Bow, Oklahoma</title>
+    <link rel="icon" type="image/png" href="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-forest: #2C3E2D;
+            --color-forest-dark: #1a2a1b;
+            --color-forest-light: #3d5240;
+            --color-sage: #8B9A7D;
+            --color-sage-light: #a8b49d;
+            --color-cream: #F5F2EB;
+            --color-cream-dark: #E8E4D9;
+            --color-warm-white: #FDFCFA;
+            --color-charcoal: #2D2D2D;
+            --color-charcoal-light: #4A4A4A;
+            --color-gold: #B8956B;
+            --color-gold-light: #D4B896;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', -apple-system, sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); font-weight: 400; line-height: 1.7; color: var(--color-charcoal); background-color: var(--color-warm-white); overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+        ul { list-style: none; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 500; line-height: 1.2; color: var(--color-forest-dark); }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        p { font-size: 1rem; color: var(--color-charcoal-light); max-width: 65ch; }
+        .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-sage); margin-bottom: var(--space-sm); display: block; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: none; cursor: pointer; transition: var(--transition-smooth); }
+        .btn--primary { background: var(--color-gold); color: var(--color-warm-white); }
+        .btn--primary:hover { background: var(--color-gold-light); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+
+        /* Navigation */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(253, 252, 250, 0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
+        .nav__logo img { height: 40px; width: auto; }
+        .nav__menu { display: flex; align-items: center; gap: 2rem; }
+        .nav__link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-charcoal); position: relative; padding: 0.5rem 0; }
+        .nav__link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-gold); transition: var(--transition-fast); }
+        .nav__link:hover::after, .nav__link.active::after { width: 100%; }
+        .nav__cta { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.875rem 1.5rem; background: var(--color-gold); color: var(--color-warm-white); }
+        .nav__cta:hover { background: var(--color-gold-light); transform: translateY(-2px); }
+        .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+        .nav__toggle span { width: 24px; height: 2px; background: var(--color-charcoal); transition: var(--transition-fast); }
+
+        /* Page Header */
+        .page-header { position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 70px; }
+        .page-header__bg { position: absolute; inset: 0; z-index: -2; }
+        .page-header__bg img { width: 100%; height: 100%; object-fit: cover; }
+        .page-header__overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26, 42, 27, 0.4), rgba(26, 42, 27, 0.7)); z-index: -1; }
+        .page-header__content { text-align: center; padding: var(--space-md); }
+        .page-header__content .section-label { color: var(--color-gold-light); }
+        .page-header__content h1 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .page-header__content p { color: var(--color-cream); font-size: 1.125rem; margin: 0 auto; max-width: 600px; }
+
+        /* Section */
+        .section { padding: var(--space-xl) var(--space-md); }
+        .section--cream { background: var(--color-cream); }
+        .section--forest { background: var(--color-forest); }
+        .section--forest h2, .section--forest h3, .section--forest h4 { color: var(--color-cream); }
+        .section--forest p { color: var(--color-sage-light); }
+        .section--forest .section-label { color: var(--color-gold-light); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); }
+        .section__header { text-align: center; margin-bottom: var(--space-xl); }
+        .section__header h2 { margin-bottom: var(--space-sm); }
+        .section__header p { margin: 0 auto; }
+
+        /* Property Stats */
+        .property-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
+        .property-stat { text-align: center; padding: var(--space-lg); background: var(--color-warm-white); border: 1px solid var(--color-cream-dark); }
+        .property-stat__icon { width: 60px; height: 60px; margin: 0 auto var(--space-sm); display: flex; align-items: center; justify-content: center; background: var(--color-cream); border-radius: 50%; }
+        .property-stat__icon svg { width: 28px; height: 28px; stroke: var(--color-forest); stroke-width: 1.5; fill: none; }
+        .property-stat__number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 600; color: var(--color-forest); line-height: 1; }
+        .property-stat__label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-top: 0.25rem; }
+
+        /* Amenities Grid */
+        .amenities-section { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
+        .amenities-category { background: var(--color-warm-white); padding: var(--space-lg); border: 1px solid var(--color-cream-dark); }
+        .amenities-category h3 { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md); font-size: 1.5rem; }
+        .amenities-category h3 svg { width: 28px; height: 28px; stroke: var(--color-gold); stroke-width: 1.5; fill: none; }
+        .amenities-category ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xs); }
+        .amenities-category li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; color: var(--color-charcoal-light); padding: 0.5rem 0; }
+        .amenities-category li svg { width: 18px; height: 18px; stroke: var(--color-sage); stroke-width: 2; fill: none; flex-shrink: 0; }
+
+        /* Policies */
+        .policies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        .policy-card { background: rgba(255,255,255,0.1); padding: var(--space-md); border: 1px solid rgba(255,255,255,0.1); }
+        .policy-card h4 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold-light); margin-bottom: var(--space-sm); }
+        .policy-card p { font-size: 0.95rem; color: var(--color-sage-light); margin: 0; }
+        .policy-card ul { margin-top: var(--space-sm); }
+        .policy-card li { font-size: 0.9rem; color: var(--color-sage-light); padding: 0.25rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+        .policy-card li::before { content: '•'; color: var(--color-gold); }
+
+        /* What's Provided */
+        .provided-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); align-items: start; }
+        .provided-section h3 { margin-bottom: var(--space-md); }
+        .provided-list { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+        .provided-item { background: var(--color-cream); padding: 0.5rem 1rem; font-size: 0.9rem; color: var(--color-charcoal); display: flex; align-items: center; gap: 0.5rem; }
+        .provided-item svg { width: 16px; height: 16px; stroke: var(--color-forest); stroke-width: 2; fill: none; }
+        .bring-list { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+        .bring-item { background: var(--color-forest); padding: 0.5rem 1rem; font-size: 0.9rem; color: var(--color-cream); display: flex; align-items: center; gap: 0.5rem; }
+
+        /* CTA Banner */
+        .cta-banner { position: relative; padding: var(--space-xl) var(--space-md); text-align: center; overflow: hidden; }
+        .cta-banner__bg { position: absolute; inset: 0; z-index: -2; }
+        .cta-banner__bg img { width: 100%; height: 100%; object-fit: cover; }
+        .cta-banner__overlay { position: absolute; inset: 0; background: rgba(26, 42, 27, 0.85); z-index: -1; }
+        .cta-banner__content h2 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .cta-banner__content p { color: var(--color-sage-light); margin: 0 auto var(--space-md); }
+
+        /* Footer */
+        .footer { background: var(--color-forest-dark); color: var(--color-cream); padding: var(--space-lg) var(--space-md); }
+        .footer__content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); }
+        .footer__brand img { height: 50px; }
+        .footer__links { display: flex; gap: var(--space-md); }
+        .footer__links a { font-size: 0.85rem; color: var(--color-sage-light); }
+        .footer__links a:hover { color: var(--color-gold-light); }
+        .footer__copyright { font-size: 0.85rem; color: var(--color-sage-light); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .property-stats { grid-template-columns: repeat(2, 1fr); }
+            .amenities-section { grid-template-columns: 1fr; }
+            .policies-grid { grid-template-columns: 1fr; }
+            .provided-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.5rem; }
+            .nav__menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--color-forest-dark); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transition: var(--transition-smooth); }
+            .nav__menu.active { right: 0; }
+            .nav__menu .nav__link { color: var(--color-cream); font-size: 1.25rem; }
+            .nav__toggle { display: flex; }
+            .page-header { height: 50vh; }
+            .property-stats { grid-template-columns: 1fr; }
+            .amenities-category ul { grid-template-columns: 1fr; }
+            .footer__content { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav__logo">
+            <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+        </a>
+        <ul class="nav__menu" id="navMenu">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="the-cabin.html" class="nav__link active">The Cabin</a></li>
+            <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="the-area.html" class="nav__link">The Area</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+            <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="nav__cta" target="_blank">Book Now</a></li>
+        </ul>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__bg">
+            <img src="https://l.icdbcdn.com/oh/b8859954-00ac-48ea-b2e0-c561d45b6cc8.jpg?w=2080" alt="Cabin Interior">
+        </div>
+        <div class="page-header__overlay"></div>
+        <div class="page-header__content">
+            <span class="section-label">Property Details</span>
+            <h1>The Cabin</h1>
+            <p>Discover every detail of our spacious, modern cabin retreat nestled in the Oklahoma woods.</p>
+        </div>
+    </header>
+
+    <!-- Property Stats -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="property-stats" data-aos="fade-up">
+                <div class="property-stat">
+                    <div class="property-stat__icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    </div>
+                    <div class="property-stat__number">3,389</div>
+                    <div class="property-stat__label">Square Feet</div>
+                </div>
+                <div class="property-stat">
+                    <div class="property-stat__icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="property-stat__number">16</div>
+                    <div class="property-stat__label">Max Guests</div>
+                </div>
+                <div class="property-stat">
+                    <div class="property-stat__icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <div class="property-stat__number">3</div>
+                    <div class="property-stat__label">King Bedrooms</div>
+                </div>
+                <div class="property-stat">
+                    <div class="property-stat__icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <div class="property-stat__number">1+</div>
+                    <div class="property-stat__label">Acres of Woods</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="section" id="amenities">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section-label">What's Included</span>
+                <h2>Cabin Amenities</h2>
+                <p>Everything you need for a comfortable and memorable stay.</p>
+            </div>
+            <div class="amenities-section">
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="0">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                        Bedrooms & Sleeping
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 3 King-sized beds</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Premium linens</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Extra blankets</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Sleeps up to 16 guests</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Upstairs thermostat</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Downstairs thermostat</li>
+                    </ul>
+                </div>
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM12 8v8M8 12h8"/></svg>
+                        Kitchen
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full-size appliances</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cookware & utensils</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Plates & silverware</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Glassware</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dishwasher</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Basic spices included</li>
+                    </ul>
+                </div>
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        Entertainment
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Smart TVs with apps</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Apple AirPlay 2</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Chromecast capable</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> DirecTV satellite</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> WiFi included</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Board games</li>
+                    </ul>
+                </div>
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+                        Outdoor
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Hot tub</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Propane grill</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Outdoor gas fireplace</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Campfire area</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Scenic deck</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 1+ acre wooded setting</li>
+                    </ul>
+                </div>
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        Bathrooms
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Master double-shower</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Stand-alone bathtub</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Bath towels provided</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Toilet paper included</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Multiple bathrooms</li>
+                    </ul>
+                </div>
+                <div class="amenities-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                        Living Spaces
+                    </h3>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Large sectional sofa</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Indoor gas fireplace</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Washer & dryer</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Paper towels</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dish soap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Bring -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="provided-grid">
+                <div data-aos="fade-right">
+                    <span class="section-label">We Provide</span>
+                    <h3>What's Included</h3>
+                    <p style="margin-bottom: var(--space-md);">These essentials are ready and waiting for you.</p>
+                    <div class="provided-list">
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dish soap</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Paper towels</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Toilet paper</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Bath towels</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Linens</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cookware</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Utensils</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dinnerware</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Glassware</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Propane grill</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Basic spices</span>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="section-label">Please Bring</span>
+                    <h3>What to Pack</h3>
+                    <p style="margin-bottom: var(--space-md);">Don't forget to bring these items for your stay.</p>
+                    <div class="bring-list">
+                        <span class="bring-item">Insect repellent</span>
+                        <span class="bring-item">Coffee pods/grounds</span>
+                        <span class="bring-item">Condiments</span>
+                        <span class="bring-item">Personal toiletries</span>
+                        <span class="bring-item">Food & beverages</span>
+                        <span class="bring-item">Fire starters</span>
+                        <span class="bring-item">Firewood</span>
+                        <span class="bring-item">Beach towels</span>
+                        <span class="bring-item">Life jackets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies -->
+    <section class="section section--forest" id="policies">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section-label">Important Information</span>
+                <h2>House Rules & Policies</h2>
+            </div>
+            <div class="policies-grid">
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="0">
+                    <h4>Check-In & Check-Out</h4>
+                    <ul>
+                        <li>Check-in: 4:00 PM CST or later</li>
+                        <li>Check-out: 11:00 AM CST</li>
+                        <li>Self check-in via keyless entry</li>
+                        <li>Code = last 4 digits of your phone</li>
+                        <li>Late checkout incurs additional charges</li>
+                    </ul>
+                </div>
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Departure Checklist</h4>
+                    <ul>
+                        <li>Load and start dishwasher</li>
+                        <li>Start laundry with used towels</li>
+                        <li>Turn off and clean grill if used</li>
+                        <li>Bag trash and place in outdoor cans</li>
+                        <li>Set thermostats (60°F winter / 76°F summer)</li>
+                        <li>Lock all doors and windows</li>
+                    </ul>
+                </div>
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="200">
+                    <h4>House Rules</h4>
+                    <ul>
+                        <li>No smoking inside cabin or patio</li>
+                        <li>Smoking permitted in gravel areas only</li>
+                        <li>No non-toilet-paper items in toilets</li>
+                        <li>No pets (service animals with notice)</li>
+                        <li>Do not move furniture</li>
+                        <li>Extinguish all fires before leaving</li>
+                    </ul>
+                </div>
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="300">
+                    <h4>Additional Guests</h4>
+                    <ul>
+                        <li>Extra guests beyond capacity: $20/person/night</li>
+                        <li>Up to 4 additional guests allowed</li>
+                        <li>Children under 3: Free</li>
+                    </ul>
+                </div>
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="400">
+                    <h4>Pet Policy</h4>
+                    <ul>
+                        <li>No pets allowed</li>
+                        <li>Licensed service animals permitted</li>
+                        <li>$25/night fee for service animals</li>
+                        <li>Advance notice required</li>
+                        <li>Extra cleaning fee if needed</li>
+                    </ul>
+                </div>
+                <div class="policy-card" data-aos="fade-up" data-aos-delay="500">
+                    <h4>Cancellation Policy</h4>
+                    <ul>
+                        <li>30+ days: Full refund minus $100 fee</li>
+                        <li>15-29 days: 50% refund</li>
+                        <li>Under 14 days: 25% refund</li>
+                        <li>No refunds for no-shows</li>
+                        <li>No refunds for early departure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner__bg">
+            <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=2080" alt="Cabin Exterior">
+        </div>
+        <div class="cta-banner__overlay"></div>
+        <div class="cta-banner__content" data-aos="fade-up">
+            <h2>Ready to Book Your Stay?</h2>
+            <p>Experience the perfect woodland escape at All FORE The View.</p>
+            <a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="btn btn--primary" target="_blank">
+                Check Availability
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html" class="footer__brand">
+                    <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+                </a>
+                <div class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="the-cabin.html">The Cabin</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="the-area.html">The Area</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 All FORE The View. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>

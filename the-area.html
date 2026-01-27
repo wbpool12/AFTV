@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Broken Bow and Hochatown, Oklahoma - local attractions, dining, outdoor activities near All FORE The View cabin rental.">
+    <title>The Area | All FORE The View | Broken Bow, Oklahoma</title>
+    <link rel="icon" type="image/png" href="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --color-forest: #2C3E2D;
+            --color-forest-dark: #1a2a1b;
+            --color-forest-light: #3d5240;
+            --color-sage: #8B9A7D;
+            --color-sage-light: #a8b49d;
+            --color-cream: #F5F2EB;
+            --color-cream-dark: #E8E4D9;
+            --color-warm-white: #FDFCFA;
+            --color-charcoal: #2D2D2D;
+            --color-charcoal-light: #4A4A4A;
+            --color-gold: #B8956B;
+            --color-gold-light: #D4B896;
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', -apple-system, sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: all 0.2s ease;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); font-weight: 400; line-height: 1.7; color: var(--color-charcoal); background-color: var(--color-warm-white); overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition-fast); }
+        ul { list-style: none; }
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 500; line-height: 1.2; color: var(--color-forest-dark); }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        p { font-size: 1rem; color: var(--color-charcoal-light); max-width: 65ch; }
+        .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-sage); margin-bottom: var(--space-sm); display: block; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: none; cursor: pointer; transition: var(--transition-smooth); }
+        .btn--primary { background: var(--color-gold); color: var(--color-warm-white); }
+        .btn--primary:hover { background: var(--color-gold-light); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+        .btn--secondary { background: transparent; color: var(--color-forest); border: 2px solid var(--color-forest); }
+        .btn--secondary:hover { background: var(--color-forest); color: var(--color-warm-white); }
+
+        /* Navigation */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.25rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(253, 252, 250, 0.97); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08); }
+        .nav__logo img { height: 40px; width: auto; }
+        .nav__menu { display: flex; align-items: center; gap: 2rem; }
+        .nav__link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-charcoal); position: relative; padding: 0.5rem 0; }
+        .nav__link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-gold); transition: var(--transition-fast); }
+        .nav__link:hover::after, .nav__link.active::after { width: 100%; }
+        .nav__cta { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.875rem 1.5rem; background: var(--color-gold); color: var(--color-warm-white); }
+        .nav__cta:hover { background: var(--color-gold-light); transform: translateY(-2px); }
+        .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+        .nav__toggle span { width: 24px; height: 2px; background: var(--color-charcoal); transition: var(--transition-fast); }
+
+        /* Page Header */
+        .page-header { position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 70px; }
+        .page-header__bg { position: absolute; inset: 0; z-index: -2; }
+        .page-header__bg img { width: 100%; height: 100%; object-fit: cover; }
+        .page-header__overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26, 42, 27, 0.4), rgba(26, 42, 27, 0.7)); z-index: -1; }
+        .page-header__content { text-align: center; padding: var(--space-md); }
+        .page-header__content .section-label { color: var(--color-gold-light); }
+        .page-header__content h1 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .page-header__content p { color: var(--color-cream); font-size: 1.125rem; margin: 0 auto; max-width: 600px; }
+
+        /* Section */
+        .section { padding: var(--space-xl) var(--space-md); }
+        .section--cream { background: var(--color-cream); }
+        .section--forest { background: var(--color-forest); }
+        .section--forest h2, .section--forest h3, .section--forest h4 { color: var(--color-cream); }
+        .section--forest p { color: var(--color-sage-light); }
+        .section--forest .section-label { color: var(--color-gold-light); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); }
+        .section__header { text-align: center; margin-bottom: var(--space-xl); }
+        .section__header h2 { margin-bottom: var(--space-sm); }
+        .section__header p { margin: 0 auto; }
+
+        /* Location Info */
+        .location-info { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+        .location-info__content h2 { margin-bottom: var(--space-md); }
+        .location-info__content p { margin-bottom: var(--space-sm); }
+        .location-info__address { background: var(--color-cream); padding: var(--space-md); margin-top: var(--space-md); }
+        .location-info__address h4 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-bottom: var(--space-xs); }
+        .location-info__address p { font-size: 1.125rem; color: var(--color-charcoal); margin: 0; }
+        .location-info__map { position: relative; height: 450px; background: var(--color-cream); overflow: hidden; }
+        .location-info__map iframe { width: 100%; height: 100%; border: none; }
+
+        /* Attractions Grid */
+        .attractions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        .attraction-card { background: var(--color-warm-white); border: 1px solid var(--color-cream-dark); overflow: hidden; transition: var(--transition-smooth); }
+        .attraction-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .attraction-card__image { height: 200px; overflow: hidden; }
+        .attraction-card__image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth); }
+        .attraction-card:hover .attraction-card__image img { transform: scale(1.08); }
+        .attraction-card__content { padding: var(--space-md); }
+        .attraction-card__content h3 { font-size: 1.25rem; margin-bottom: var(--space-xs); }
+        .attraction-card__content p { font-size: 0.9rem; margin: 0; }
+        .attraction-card__distance { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-top: var(--space-sm); }
+        .attraction-card__distance svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+        /* Directions Section */
+        .directions { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+        .directions__content h2 { margin-bottom: var(--space-md); }
+        .directions__steps { counter-reset: step; }
+        .directions__step { display: flex; gap: var(--space-sm); padding: var(--space-sm) 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .directions__step:last-child { border-bottom: none; }
+        .directions__step-number { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--color-gold); color: var(--color-forest-dark); font-size: 0.85rem; font-weight: 700; flex-shrink: 0; }
+        .directions__step-text { font-size: 0.95rem; color: var(--color-sage-light); }
+        .directions__note { background: rgba(184, 149, 107, 0.2); padding: var(--space-md); margin-top: var(--space-md); border-left: 3px solid var(--color-gold); }
+        .directions__note p { color: var(--color-cream); font-size: 0.9rem; margin: 0; }
+        .directions__image { display: flex; flex-direction: column; gap: var(--space-md); }
+        .directions__image img { width: 100%; height: 250px; object-fit: cover; }
+
+        /* Activities List */
+        .activities-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-md); }
+        .activity-item { text-align: center; padding: var(--space-lg) var(--space-md); background: var(--color-warm-white); border: 1px solid var(--color-cream-dark); transition: var(--transition-smooth); }
+        .activity-item:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); border-color: transparent; }
+        .activity-item__icon { width: 70px; height: 70px; margin: 0 auto var(--space-md); display: flex; align-items: center; justify-content: center; background: var(--color-cream); border-radius: 50%; }
+        .activity-item__icon svg { width: 32px; height: 32px; stroke: var(--color-forest); stroke-width: 1.5; fill: none; }
+        .activity-item h4 { font-family: var(--font-heading); font-size: 1.25rem; margin-bottom: var(--space-xs); }
+        .activity-item p { font-size: 0.85rem; margin: 0; }
+
+        /* CTA Banner */
+        .cta-banner { position: relative; padding: var(--space-xl) var(--space-md); text-align: center; overflow: hidden; }
+        .cta-banner__bg { position: absolute; inset: 0; z-index: -2; }
+        .cta-banner__bg img { width: 100%; height: 100%; object-fit: cover; }
+        .cta-banner__overlay { position: absolute; inset: 0; background: rgba(26, 42, 27, 0.85); z-index: -1; }
+        .cta-banner__content h2 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .cta-banner__content p { color: var(--color-sage-light); margin: 0 auto var(--space-md); }
+
+        /* Footer */
+        .footer { background: var(--color-forest-dark); color: var(--color-cream); padding: var(--space-lg) var(--space-md); }
+        .footer__content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md); }
+        .footer__brand img { height: 50px; }
+        .footer__links { display: flex; gap: var(--space-md); }
+        .footer__links a { font-size: 0.85rem; color: var(--color-sage-light); }
+        .footer__links a:hover { color: var(--color-gold-light); }
+        .footer__copyright { font-size: 0.85rem; color: var(--color-sage-light); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .location-info { grid-template-columns: 1fr; }
+            .attractions-grid { grid-template-columns: repeat(2, 1fr); }
+            .directions { grid-template-columns: 1fr; }
+            .activities-list { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav { padding: 1rem 1.5rem; }
+            .nav__menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--color-forest-dark); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transition: var(--transition-smooth); }
+            .nav__menu.active { right: 0; }
+            .nav__menu .nav__link { color: var(--color-cream); font-size: 1.25rem; }
+            .nav__toggle { display: flex; }
+            .attractions-grid { grid-template-columns: 1fr; }
+            .activities-list { grid-template-columns: 1fr; }
+            .footer__content { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav__logo">
+            <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+        </a>
+        <ul class="nav__menu" id="navMenu">
+            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="the-cabin.html" class="nav__link">The Cabin</a></li>
+            <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="the-area.html" class="nav__link active">The Area</a></li>
+            <li><a href="contact.html" class="nav__link">Contact</a></li>
+            <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="nav__cta" target="_blank">Book Now</a></li>
+        </ul>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__bg">
+            <img src="https://l.icdbcdn.com/oh/64331a23-d363-44de-8ee4-063b4efe67d3.jpg?w=2080" alt="Wooded Area">
+        </div>
+        <div class="page-header__overlay"></div>
+        <div class="page-header__content">
+            <span class="section-label">Discover the Region</span>
+            <h1>The Area</h1>
+            <p>Explore Broken Bow, Hochatown, and all the amazing attractions nearby.</p>
+        </div>
+    </header>
+
+    <!-- Location Info -->
+    <section class="section">
+        <div class="container">
+            <div class="location-info">
+                <div class="location-info__content" data-aos="fade-right">
+                    <span class="section-label">Our Location</span>
+                    <h2>Welcome to Broken Bow</h2>
+                    <p>All FORE The View is perfectly positioned in the heart of Oklahoma's premier vacation destination. Nestled on over an acre of serene woods, you'll enjoy complete privacy while being just minutes from everything Hochatown and Broken Bow have to offer.</p>
+                    <p>Our cabin is less than a mile from Hochatown Square, giving you easy access to restaurants, shops, breweries, and entertainment without sacrificing the peaceful woodland setting you came for.</p>
+                    <div class="location-info__address">
+                        <h4>Property Address</h4>
+                        <p>1217 N Lukfata Trail Road<br>Broken Bow, OK 74728</p>
+                    </div>
+                </div>
+                <div class="location-info__map" data-aos="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.5!2d-94.79!3d34.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDEwJzE2LjciTiA5NMKwNDcnMjMuNSJX!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Attractions -->
+    <section class="section section--cream">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section-label">Things To Do</span>
+                <h2>Local Attractions</h2>
+                <p>From outdoor adventures to local dining, there's something for everyone in Broken Bow.</p>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" alt="Beavers Bend State Park">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Beavers Bend State Park</h3>
+                        <p>Over 1,300 acres of stunning natural beauty with hiking trails, fishing, and kayaking on Broken Bow Lake and the Mountain Fork River.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            10 minutes away
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Hochatown Square">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Hochatown Square</h3>
+                        <p>The heart of Hochatown featuring unique shops, restaurants, entertainment venues, and the famous Hochatown Saloon.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Less than 1 mile
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1535530124892-d10f1a0c5c51?w=600" alt="Mountain Fork Brewery">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Mountain Fork Brewery</h3>
+                        <p>Local craft brewery on Lukfata Trail Road offering a great selection of beers and a relaxed atmosphere.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            On your route
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Broken Bow Lake">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Broken Bow Lake</h3>
+                        <p>14,000 acres of crystal clear water perfect for boating, fishing, swimming, and water sports.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            15 minutes away
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" alt="Hochatown Distillery">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Hochatown Distillery</h3>
+                        <p>Award-winning craft spirits with tastings and tours. Also located on Lukfata Trail Road.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            On your route
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="attraction-card__image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Local Dining">
+                    </div>
+                    <div class="attraction-card__content">
+                        <h3>Local Dining</h3>
+                        <p>From BBQ to fine dining, Hochatown offers diverse culinary experiences for every taste.</p>
+                        <div class="attraction-card__distance">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Multiple options nearby
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directions -->
+    <section class="section section--forest" id="directions">
+        <div class="container">
+            <div class="directions">
+                <div class="directions__content" data-aos="fade-right">
+                    <span class="section-label">Getting Here</span>
+                    <h2>Directions to the Cabin</h2>
+                    <p style="color: var(--color-sage-light); margin-bottom: var(--space-md);">Please note: Our address may not show correctly on GPS. We recommend printing these directions.</p>
+                    <div class="directions__steps">
+                        <div class="directions__step">
+                            <div class="directions__step-number">1</div>
+                            <p class="directions__step-text">Starting from Pruett's Grocery Store in Broken Bow (main intersection), drive approximately <strong>11.6 miles north on Highway 259</strong>.</p>
+                        </div>
+                        <div class="directions__step">
+                            <div class="directions__step-number">2</div>
+                            <p class="directions__step-text"><strong>Turn left onto Lukfata Trail Road</strong> - this is a paved road shared with Hochatown Distillery and Mountain Fork Brewery.</p>
+                        </div>
+                        <div class="directions__step">
+                            <div class="directions__step-number">3</div>
+                            <p class="directions__step-text">Drive <strong>0.8 miles</strong> until you reach an intersection.</p>
+                        </div>
+                        <div class="directions__step">
+                            <div class="directions__step-number">4</div>
+                            <p class="directions__step-text"><strong>Stay left</strong> on North Lukfata Trail Road and continue for another <strong>0.4 miles</strong>.</p>
+                        </div>
+                        <div class="directions__step">
+                            <div class="directions__step-number">5</div>
+                            <p class="directions__step-text"><strong>Turn right at the cabin driveway</strong> and drive up the hill. You've arrived!</p>
+                        </div>
+                    </div>
+                    <div class="directions__note">
+                        <p><strong>Note:</strong> You will cross 2 creeks with single-lane bridges on the route. Please drive carefully.</p>
+                    </div>
+                </div>
+                <div class="directions__image" data-aos="fade-left">
+                    <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=800" alt="Cabin Exterior">
+                    <img src="https://l.icdbcdn.com/oh/47e49ee1-0cbd-4c30-81c0-ef87ed340d26.jpg?w=800" alt="Property View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section-label">Adventure Awaits</span>
+                <h2>Popular Activities</h2>
+                <p>From relaxing to adventurous, the Broken Bow area has activities for everyone.</p>
+            </div>
+            <div class="activities-list">
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5c0 .83-.67 1.5-1.5 1.5h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z"/><path d="M8.5 5H10V3.5c0-.83-.67-1.5-1.5-1.5S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+                    </div>
+                    <h4>Kayaking</h4>
+                    <p>Paddle the crystal-clear waters of Broken Bow Lake and Mountain Fork River</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4>Hiking</h4>
+                    <p>Explore miles of scenic trails through pristine forests at Beavers Bend</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+                    </div>
+                    <h4>Fishing</h4>
+                    <p>World-class trout fishing in the cold waters below Broken Bow Dam</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/></svg>
+                    </div>
+                    <h4>Golf</h4>
+                    <p>Tee off at nearby courses surrounded by beautiful Ouachita Mountain scenery</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <h4>Brewery Tours</h4>
+                    <p>Visit local craft breweries and distilleries for tastings and tours</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h4>Stargazing</h4>
+                    <p>Experience incredible night skies away from city lights at the cabin</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h4>Local Events</h4>
+                    <p>Check out seasonal festivals, markets, and entertainment in Hochatown</p>
+                </div>
+                <div class="activity-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="activity-item__icon">
+                        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    </div>
+                    <h4>Shopping</h4>
+                    <p>Browse unique boutiques and local artisan shops in Hochatown Square</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner__bg">
+            <img src="https://l.icdbcdn.com/oh/d536227c-6631-4699-aeef-c7b8e014b366.jpg?w=2080" alt="Cabin View">
+        </div>
+        <div class="cta-banner__overlay"></div>
+        <div class="cta-banner__content" data-aos="fade-up">
+            <h2>Ready to Explore?</h2>
+            <p>Book your stay and discover everything Broken Bow has to offer.</p>
+            <a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="btn btn--primary" target="_blank">
+                Check Availability
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="index.html" class="footer__brand">
+                    <img src="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=200" alt="All FORE The View">
+                </a>
+                <div class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="the-cabin.html">The Cabin</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="the-area.html">The Area</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 All FORE The View. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
