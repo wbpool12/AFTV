@@ -166,9 +166,10 @@
             <li><a href="index.html" class="nav__link">Home</a></li>
             <li><a href="the-cabin.html" class="nav__link active">The Cabin</a></li>
             <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+            <li><a href="map.html" class="nav__link">Map</a></li>
             <li><a href="the-area.html" class="nav__link">The Area</a></li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
-            <li><a href="https://checkout.lodgify.com/en/allforetheview/350009/reservation" class="nav__cta" target="_blank">Book Now</a></li>
+            <li><a href="#" class="nav__cta" onclick="openBookingModal(); return false;">Book Now</a></li>
         </ul>
         <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
@@ -282,7 +283,7 @@
                     </h3>
                     <ul>
                         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Hot tub</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Propane grill</li>
+                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Traeger Flat Top Griddle</li>
                         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Outdoor gas fireplace</li>
                         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Campfire area</li>
                         <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Scenic deck</li>
@@ -337,7 +338,7 @@
                         <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Utensils</span>
                         <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Dinnerware</span>
                         <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Glassware</span>
-                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Propane grill</span>
+                        <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Traeger Flat Top Griddle</span>
                         <span class="provided-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Basic spices</span>
                     </div>
                 </div>
@@ -460,6 +461,7 @@
                     <a href="index.html">Home</a>
                     <a href="the-cabin.html">The Cabin</a>
                     <a href="gallery.html">Gallery</a>
+                    <a href="map.html">Map</a>
                     <a href="the-area.html">The Area</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -467,6 +469,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="booking-modal__content">
+            <button class="booking-modal__close" onclick="closeBookingModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <iframe id="bookingFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <style>
+        .booking-modal { position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+        .booking-modal.active { display: flex; opacity: 1; }
+        .booking-modal__content { position: relative; width: 95%; max-width: 1100px; height: 90vh; background: var(--color-warm-white); box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4); }
+        .booking-modal__close { position: absolute; top: -50px; right: 0; width: 44px; height: 44px; background: transparent; border: none; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; }
+        .booking-modal__close svg { width: 32px; height: 32px; stroke: var(--color-warm-white); transition: var(--transition-fast); }
+        .booking-modal__close:hover svg { stroke: var(--color-gold); }
+        .booking-modal__content iframe { width: 100%; height: 100%; border: none; }
+    </style>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -477,11 +499,36 @@
             navMenu.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
-        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
+        document.querySelectorAll('.nav__link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
             });
+        });
+
+        // Booking Modal Functions
+        function openBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            const frame = document.getElementById('bookingFrame');
+            frame.src = 'https://checkout.lodgify.com/allforetheview/en/#/350009';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('bookingModal');
+            const frame = document.getElementById('bookingFrame');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            frame.src = '';
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) closeBookingModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeBookingModal();
         });
     </script>
 </body>
