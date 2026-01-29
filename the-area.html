@@ -480,7 +480,7 @@
             navMenu.classList.toggle('active');
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
-        document.querySelectorAll('.nav__link').forEach(link => {
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
