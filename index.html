@@ -2122,7 +2122,7 @@
         });
 
         // Close mobile menu on link click
-        document.querySelectorAll('.nav__link').forEach(link => {
+        document.querySelectorAll('.nav__link, .nav__cta').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 document.body.style.overflow = '';
