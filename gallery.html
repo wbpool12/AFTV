@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse the photo gallery of All FORE The View cabin - stunning images of our luxury cabin rental in Broken Bow, Oklahoma.">
+    <meta name="description" content="Browse the complete photo gallery of All FORE The View cabin - 69 stunning images of our luxury cabin rental in Broken Bow, Oklahoma.">
     <title>Gallery | All FORE The View | Broken Bow, Oklahoma</title>
     <link rel="icon" type="image/png" href="https://l.icdbcdn.com/oh/f0a5a2de-efd3-4be6-ae6d-76e2a8965c09.png?w=32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,58 +62,46 @@
         .nav__toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1001; }
         .nav__toggle span { width: 24px; height: 2px; background: var(--color-charcoal); transition: var(--transition-fast); }
 
-        /* Hero Collage */
-        .hero-collage { padding-top: 90px; padding-bottom: var(--space-md); max-width: 1400px; margin: 0 auto; padding-left: var(--space-md); padding-right: var(--space-md); }
-        .hero-collage__header { margin-bottom: var(--space-md); }
-        .hero-collage__header h1 { margin-bottom: 0.5rem; }
-        .hero-collage__header p { color: var(--color-charcoal-light); }
-        .hero-collage__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; height: 60vh; min-height: 450px; max-height: 600px; border-radius: var(--radius-lg); overflow: hidden; }
-        .hero-collage__item { position: relative; overflow: hidden; cursor: pointer; }
-        .hero-collage__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .hero-collage__item:hover img { transform: scale(1.05); }
-        .hero-collage__item--main { grid-row: span 2; }
-        .hero-collage__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.3), transparent 50%); opacity: 0; transition: var(--transition-fast); }
-        .hero-collage__item:hover .hero-collage__overlay { opacity: 1; }
-        .hero-collage__btn { position: absolute; bottom: var(--space-md); right: var(--space-md); background: var(--color-warm-white); color: var(--color-charcoal); padding: 0.75rem 1.25rem; font-size: 0.85rem; font-weight: 600; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.15); cursor: pointer; border: none; transition: var(--transition-fast); }
-        .hero-collage__btn:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
-        .hero-collage__btn svg { width: 18px; height: 18px; }
+        /* Photo Tour Container */
+        .photo-tour { max-width: 1100px; margin: 0 auto; padding: 90px 20px 0; }
+        .photo-tour__header { padding: var(--space-md) 0; border-bottom: 1px solid var(--color-cream-dark); margin-bottom: var(--space-sm); }
+        .photo-tour__header h1 { margin-bottom: 0.25rem; }
+        .photo-tour__header p { color: var(--color-charcoal-light); font-size: 0.95rem; }
+        .photo-tour__count { display: inline-block; background: var(--color-cream); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; color: var(--color-charcoal-light); margin-top: 0.5rem; }
 
         /* Photo Tour Navigation */
         .photo-tour-nav { position: sticky; top: 70px; background: var(--color-warm-white); z-index: 100; border-bottom: 1px solid var(--color-cream-dark); }
-        .photo-tour-nav__inner { max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md); display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+        .photo-tour-nav__inner { max-width: 1100px; margin: 0 auto; padding: 0; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
         .photo-tour-nav__inner::-webkit-scrollbar { display: none; }
-        .photo-tour-nav__link { padding: 1rem 1.5rem; font-size: 0.85rem; font-weight: 500; color: var(--color-charcoal-light); white-space: nowrap; border-bottom: 2px solid transparent; transition: var(--transition-fast); }
+        .photo-tour-nav__link { padding: 1rem 1.25rem; font-size: 0.8rem; font-weight: 500; color: var(--color-charcoal-light); white-space: nowrap; border-bottom: 2px solid transparent; transition: var(--transition-fast); }
         .photo-tour-nav__link:hover { color: var(--color-charcoal); }
         .photo-tour-nav__link.active { color: var(--color-charcoal); border-bottom-color: var(--color-charcoal); }
 
-        /* Photo Section */
-        .photo-section { max-width: 1400px; margin: 0 auto; padding: var(--space-lg) var(--space-md); scroll-margin-top: 140px; }
-        .photo-section__header { margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm); }
-        .photo-section__icon { width: 40px; height: 40px; background: var(--color-cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .photo-section__icon svg { width: 20px; height: 20px; stroke: var(--color-forest); stroke-width: 2; fill: none; }
-        .photo-section__title h2 { margin-bottom: 0.25rem; }
-        .photo-section__title p { font-size: 0.9rem; color: var(--color-charcoal-light); }
+        /* Photo Sections */
+        .photo-section { max-width: 1100px; margin: 0 auto; padding: var(--space-lg) 20px var(--space-sm); scroll-margin-top: 130px; }
+        .photo-section__label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-sage); margin-bottom: 0.5rem; }
+        .photo-section__title { font-size: 1.5rem; margin-bottom: var(--space-md); }
 
-        /* Photo Grid - Airbnb Style */
-        .photo-grid { display: grid; gap: 8px; }
-        .photo-grid--2col { grid-template-columns: repeat(2, 1fr); }
-        .photo-grid--3col { grid-template-columns: repeat(3, 1fr); }
-        .photo-grid--mixed { grid-template-columns: 2fr 1fr; }
-        .photo-grid--mixed-alt { grid-template-columns: 1fr 2fr; }
-        .photo-grid__item { position: relative; overflow: hidden; border-radius: var(--radius-md); cursor: pointer; aspect-ratio: 4/3; }
-        .photo-grid__item--tall { aspect-ratio: 3/4; grid-row: span 2; }
-        .photo-grid__item--wide { aspect-ratio: 16/9; grid-column: span 2; }
-        .photo-grid__item--square { aspect-ratio: 1; }
-        .photo-grid__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .photo-grid__item:hover img { transform: scale(1.05); }
-        .photo-grid__caption { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-sm) var(--space-md); background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); opacity: 0; transition: var(--transition-fast); }
-        .photo-grid__item:hover .photo-grid__caption { opacity: 1; }
-        .photo-grid__caption span { color: white; font-size: 0.9rem; font-weight: 500; }
+        /* Airbnb-style photo rows - simple vertical flow */
+        .photo-row { display: grid; gap: 8px; margin-bottom: 8px; }
+        .photo-row--1 { grid-template-columns: 1fr; }
+        .photo-row--2 { grid-template-columns: 1fr 1fr; }
+        .photo-row--3 { grid-template-columns: 1fr 1fr 1fr; }
+        .photo-row--1-2 { grid-template-columns: 2fr 1fr; }
+        .photo-row--2-1 { grid-template-columns: 1fr 2fr; }
 
-        /* Full Width Photo */
-        .photo-full { border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; position: relative; }
-        .photo-full img { width: 100%; height: 50vh; min-height: 350px; object-fit: cover; transition: transform 0.5s ease; }
-        .photo-full:hover img { transform: scale(1.02); }
+        .photo-item { position: relative; overflow: hidden; border-radius: var(--radius-md); cursor: pointer; }
+        .photo-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+        .photo-item:hover img { transform: scale(1.03); }
+        .photo-item--hero { aspect-ratio: 16/9; }
+        .photo-item--landscape { aspect-ratio: 3/2; }
+        .photo-item--portrait { aspect-ratio: 3/4; }
+        .photo-item--square { aspect-ratio: 1; }
+        .photo-item--tall { aspect-ratio: 2/3; grid-row: span 2; }
+
+        .photo-item__overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 16px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); opacity: 0; transition: opacity 0.3s; }
+        .photo-item:hover .photo-item__overlay { opacity: 1; }
+        .photo-item__overlay span { color: white; font-size: 0.85rem; font-weight: 500; }
 
         /* Lightbox */
         .lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.96); display: none; flex-direction: column; }
@@ -126,20 +114,21 @@
         .lightbox__body { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: 0 80px; }
         .lightbox__body img { max-width: 100%; max-height: calc(100vh - 160px); object-fit: contain; border-radius: var(--radius-sm); }
         .lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-fast); }
-        .lightbox__nav:hover { background: rgba(255,255,255,0.2); }
+        .lightbox__nav:hover { background: rgba(255,255,255,0.25); }
         .lightbox__nav svg { width: 24px; height: 24px; stroke: white; stroke-width: 2; fill: none; }
         .lightbox__nav--prev { left: 20px; }
         .lightbox__nav--next { right: 20px; }
         .lightbox__footer { padding: 1rem 1.5rem; text-align: center; }
-        .lightbox__caption { color: white; font-size: 1rem; }
+        .lightbox__caption { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
 
-        /* CTA Banner */
-        .cta-banner { position: relative; padding: var(--space-xl) var(--space-md); text-align: center; overflow: hidden; margin-top: var(--space-lg); }
-        .cta-banner__bg { position: absolute; inset: 0; z-index: -2; }
-        .cta-banner__bg img { width: 100%; height: 100%; object-fit: cover; }
-        .cta-banner__overlay { position: absolute; inset: 0; background: rgba(26, 42, 27, 0.85); z-index: -1; }
-        .cta-banner__content h2 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
-        .cta-banner__content p { color: var(--color-sage-light); margin: 0 auto var(--space-md); max-width: 500px; }
+        /* Embedded Booking Section */
+        .booking-section { background: var(--color-forest-dark); padding: var(--space-xl) var(--space-md); margin-top: var(--space-lg); }
+        .booking-section__inner { max-width: 900px; margin: 0 auto; text-align: center; }
+        .booking-section__label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-gold-light); margin-bottom: var(--space-sm); }
+        .booking-section h2 { color: var(--color-warm-white); margin-bottom: var(--space-sm); }
+        .booking-section p { color: var(--color-sage-light); margin-bottom: var(--space-lg); max-width: 550px; margin-left: auto; margin-right: auto; }
+        .booking-section__frame { background: var(--color-warm-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .booking-section__frame iframe { width: 100%; height: 550px; border: none; }
 
         /* Footer */
         .footer { background: var(--color-forest-dark); color: var(--color-cream); padding: var(--space-lg) var(--space-md); }
@@ -150,45 +139,28 @@
         .footer__links a:hover { color: var(--color-gold-light); }
         .footer__copyright { font-size: 0.85rem; color: var(--color-sage-light); }
 
-        /* Booking Modal */
-        .booking-modal { position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.85); display: none; align-items: center; justify-content: center; }
-        .booking-modal.active { display: flex; }
-        .booking-modal__content { position: relative; width: 95%; max-width: 1100px; height: 90vh; background: var(--color-warm-white); border-radius: var(--radius-md); overflow: hidden; }
-        .booking-modal__close { position: absolute; top: -50px; right: 0; width: 44px; height: 44px; background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-        .booking-modal__close svg { width: 32px; height: 32px; stroke: white; }
-        .booking-modal__close:hover svg { stroke: var(--color-gold); }
-        .booking-modal__content iframe { width: 100%; height: 100%; border: none; }
-
         /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-collage__grid { grid-template-columns: 1fr 1fr; height: 50vh; }
-            .hero-collage__item--main { grid-row: span 1; }
-            .hero-collage__item:nth-child(4), .hero-collage__item:nth-child(5) { display: none; }
-            .photo-grid--3col { grid-template-columns: repeat(2, 1fr); }
-        }
         @media (max-width: 768px) {
             .nav { padding: 1rem 1.5rem; }
             .nav__menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background: var(--color-forest-dark); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transition: var(--transition-smooth); }
             .nav__menu.active { right: 0; }
             .nav__menu .nav__link { color: var(--color-cream); font-size: 1.25rem; }
             .nav__toggle { display: flex; }
-            .hero-collage__grid { grid-template-columns: 1fr; height: auto; }
-            .hero-collage__item { aspect-ratio: 16/9; }
-            .hero-collage__item:nth-child(n+3) { display: none; }
             .photo-tour-nav { top: 60px; }
-            .photo-tour-nav__link { padding: 0.875rem 1rem; font-size: 0.8rem; }
-            .photo-grid--2col, .photo-grid--3col, .photo-grid--mixed, .photo-grid--mixed-alt { grid-template-columns: 1fr; }
-            .photo-grid__item--tall, .photo-grid__item--wide { grid-column: span 1; grid-row: span 1; aspect-ratio: 4/3; }
+            .photo-tour-nav__link { padding: 0.875rem 0.75rem; font-size: 0.75rem; }
+            .photo-row--2, .photo-row--3, .photo-row--1-2, .photo-row--2-1 { grid-template-columns: 1fr; }
+            .photo-item--tall { grid-row: span 1; }
+            .photo-item--landscape, .photo-item--hero { aspect-ratio: 4/3; }
             .lightbox__body { padding: 0 50px; }
             .lightbox__nav { width: 40px; height: 40px; }
             .lightbox__nav--prev { left: 5px; }
             .lightbox__nav--next { right: 5px; }
             .footer__content { flex-direction: column; text-align: center; }
+            .booking-section__frame iframe { height: 450px; }
         }
         @media (max-width: 480px) {
-            .hero-collage { padding-left: var(--space-sm); padding-right: var(--space-sm); }
-            .photo-section { padding-left: var(--space-sm); padding-right: var(--space-sm); }
-            .photo-tour-nav__inner { padding: 0 var(--space-sm); }
+            .photo-tour { padding-left: 12px; padding-right: 12px; }
+            .photo-section { padding-left: 12px; padding-right: 12px; }
         }
     </style>
 </head>
@@ -205,232 +177,440 @@
             <li><a href="map.html" class="nav__link">Map</a></li>
             <li><a href="the-area.html" class="nav__link">The Area</a></li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
-            <li><a href="#" class="nav__cta" onclick="openBookingModal(); return false;">Book Now</a></li>
+            <li><a href="#booking" class="nav__cta">Book Now</a></li>
         </ul>
         <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </button>
     </nav>
 
-    <!-- Hero Collage -->
-    <section class="hero-collage">
-        <div class="hero-collage__header">
-            <h1>All FORE The View Photo Tour</h1>
-            <p>Explore every corner of our luxury cabin retreat</p>
+    <!-- Photo Tour Header -->
+    <div class="photo-tour">
+        <div class="photo-tour__header">
+            <h1>Photo Tour</h1>
+            <p>All FORE The View &mdash; Broken Bow, Oklahoma</p>
+            <span class="photo-tour__count">69 photos</span>
         </div>
-        <div class="hero-collage__grid">
-            <div class="hero-collage__item hero-collage__item--main" data-index="0">
-                <img src="https://l.icdbcdn.com/oh/4bfc4c65-3f0c-4102-9ca0-9e499acdb026.jpg?w=1400" alt="Cabin Exterior">
-                <div class="hero-collage__overlay"></div>
-            </div>
-            <div class="hero-collage__item" data-index="1">
-                <img src="https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg?w=800" alt="Living Room">
-                <div class="hero-collage__overlay"></div>
-            </div>
-            <div class="hero-collage__item" data-index="4">
-                <img src="https://l.icdbcdn.com/oh/c1dcc6cf-6fea-40b4-897d-dbab66d1a30d.jpg?w=800" alt="Master Bedroom">
-                <div class="hero-collage__overlay"></div>
-            </div>
-            <div class="hero-collage__item" data-index="6">
-                <img src="https://l.icdbcdn.com/oh/10396493-a28f-46eb-b235-b917cc252917.jpg?w=800" alt="Back Patio">
-                <div class="hero-collage__overlay"></div>
-            </div>
-            <div class="hero-collage__item" data-index="3">
-                <img src="https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg?w=800" alt="Kitchen">
-                <div class="hero-collage__overlay"></div>
-                <button class="hero-collage__btn" onclick="openLightbox(0)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                    Show all photos
-                </button>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Photo Tour Navigation -->
     <nav class="photo-tour-nav">
         <div class="photo-tour-nav__inner">
             <a href="#exterior" class="photo-tour-nav__link active">Exterior</a>
-            <a href="#living" class="photo-tour-nav__link">Living Spaces</a>
-            <a href="#kitchen" class="photo-tour-nav__link">Kitchen</a>
+            <a href="#living" class="photo-tour-nav__link">Living Room</a>
+            <a href="#kitchen" class="photo-tour-nav__link">Kitchen & Dining</a>
+            <a href="#master" class="photo-tour-nav__link">Master Suite</a>
             <a href="#bedrooms" class="photo-tour-nav__link">Bedrooms</a>
             <a href="#bathrooms" class="photo-tour-nav__link">Bathrooms</a>
+            <a href="#loft" class="photo-tour-nav__link">Loft & Game Room</a>
             <a href="#outdoor" class="photo-tour-nav__link">Outdoor</a>
+            <a href="#views" class="photo-tour-nav__link">Views & Property</a>
         </div>
     </nav>
 
-    <!-- Exterior Section -->
+    <!-- EXTERIOR -->
     <section class="photo-section" id="exterior">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="photo-section__title">
-                <h2>Exterior</h2>
-                <p>Welcome to your mountain retreat</p>
+        <p class="photo-section__label">Exterior</p>
+        <h2 class="photo-section__title">Welcome to All FORE The View</h2>
+
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="0">
+                <img src="https://l.icdbcdn.com/oh/4bfc4c65-3f0c-4102-9ca0-9e499acdb026.jpg?w=1400" alt="Cabin Exterior" loading="lazy">
+                <div class="photo-item__overlay"><span>Cabin Exterior</span></div>
             </div>
         </div>
-        <div class="photo-grid photo-grid--mixed">
-            <div class="photo-grid__item photo-grid__item--tall" data-index="0" data-caption="Cabin Exterior - Welcome to All FORE The View">
-                <img src="https://l.icdbcdn.com/oh/4bfc4c65-3f0c-4102-9ca0-9e499acdb026.jpg?w=1200" alt="Cabin Exterior">
-                <div class="photo-grid__caption"><span>Cabin Exterior</span></div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="1">
+                <img src="https://l.icdbcdn.com/oh/d1d3edd1-ccf6-4286-b815-1e28bf922ef9.jpg?w=800" alt="Cabin Architecture" loading="lazy">
+                <div class="photo-item__overlay"><span>Cabin Architecture</span></div>
             </div>
-            <div class="photo-grid__item" data-index="9" data-caption="Stunning Cabin Architecture">
-                <img src="https://l.icdbcdn.com/oh/d1d3edd1-ccf6-4286-b815-1e28bf922ef9.jpg?w=800" alt="Cabin Architecture">
-                <div class="photo-grid__caption"><span>Cabin Architecture</span></div>
+            <div class="photo-item photo-item--landscape" data-index="2">
+                <img src="https://l.icdbcdn.com/oh/ab653370-1e15-4f45-b13f-d201a8db4853.jpg?w=800" alt="Front Entrance" loading="lazy">
+                <div class="photo-item__overlay"><span>Front Entrance</span></div>
             </div>
-            <div class="photo-grid__item" data-index="16" data-caption="Cabin Front Entrance">
-                <img src="https://l.icdbcdn.com/oh/ab653370-1e15-4f45-b13f-d201a8db4853.jpg?w=800" alt="Front Entrance">
-                <div class="photo-grid__caption"><span>Front Entrance</span></div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="3">
+                <img src="https://l.icdbcdn.com/oh/c9733e7a-5db7-4e5f-8c43-ee759feafe88.jpg?w=600" alt="Exterior Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Exterior Detail</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="4">
+                <img src="https://l.icdbcdn.com/oh/89bf4abe-2d36-4cee-ba60-a4e23acfc966.jpg?w=600" alt="Driveway" loading="lazy">
+                <div class="photo-item__overlay"><span>Driveway Approach</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="5">
+                <img src="https://l.icdbcdn.com/oh/6a10d4ef-a2fc-4a62-8a45-1eb36454b629.jpg?w=600" alt="Cabin Side View" loading="lazy">
+                <div class="photo-item__overlay"><span>Side View</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="6">
+                <img src="https://l.icdbcdn.com/oh/b991309d-9d7b-405c-8d53-c2e837db1363.jpg?w=800" alt="Cabin Entrance" loading="lazy">
+                <div class="photo-item__overlay"><span>Entrance</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="7">
+                <img src="https://l.icdbcdn.com/oh/b4884ea7-53c2-4c89-a239-debe0c475d08.jpg?w=800" alt="Exterior Night" loading="lazy">
+                <div class="photo-item__overlay"><span>Evening View</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Living Spaces Section -->
+    <!-- LIVING ROOM -->
     <section class="photo-section" id="living">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/></svg>
-            </div>
-            <div class="photo-section__title">
-                <h2>Living Spaces</h2>
-                <p>Spacious areas for gathering and relaxation</p>
-            </div>
-        </div>
-        <div class="photo-grid photo-grid--2col">
-            <div class="photo-grid__item" data-index="1" data-caption="Spacious Living Room with Vaulted Ceilings">
-                <img src="https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg?w=800" alt="Living Room">
-                <div class="photo-grid__caption"><span>Living Room</span></div>
-            </div>
-            <div class="photo-grid__item" data-index="2" data-caption="Cozy Gathering Space with Fireplace">
-                <img src="https://l.icdbcdn.com/oh/01467c16-3996-4049-8b4a-65486f886af8.jpg?w=800" alt="Fireplace Area">
-                <div class="photo-grid__caption"><span>Fireplace Area</span></div>
+        <p class="photo-section__label">Living Room</p>
+        <h2 class="photo-section__title">Spacious Gathering Spaces</h2>
+
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="8">
+                <img src="https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg?w=1400" alt="Living Room" loading="lazy">
+                <div class="photo-item__overlay"><span>Living Room with Vaulted Ceilings</span></div>
             </div>
         </div>
-        <div class="photo-grid photo-grid--3col" style="margin-top: 8px;">
-            <div class="photo-grid__item" data-index="8" data-caption="Open Concept Dining Area">
-                <img src="https://l.icdbcdn.com/oh/980da3c6-8670-469c-b5b1-cf53897ed12f.jpg?w=800" alt="Dining Area">
-                <div class="photo-grid__caption"><span>Dining Area</span></div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="9">
+                <img src="https://l.icdbcdn.com/oh/01467c16-3996-4049-8b4a-65486f886af8.jpg?w=800" alt="Fireplace Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Fireplace & Seating</span></div>
             </div>
-            <div class="photo-grid__item" data-index="14" data-caption="Game Room Entertainment">
-                <img src="https://l.icdbcdn.com/oh/f18a4c34-d99b-4002-af38-9cbb548ae65e.jpg?w=800" alt="Game Room">
-                <div class="photo-grid__caption"><span>Game Room</span></div>
+            <div class="photo-item photo-item--landscape" data-index="10">
+                <img src="https://l.icdbcdn.com/oh/3cb9f42c-c555-4ee8-a1fe-6681893e04b7.jpg?w=800" alt="Living Area Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Living Area Detail</span></div>
             </div>
-            <div class="photo-grid__item photo-grid__item--square" data-index="1" data-caption="Living Room Details">
-                <img src="https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg?w=800" alt="Living Room View">
-                <div class="photo-grid__caption"><span>Living Room View</span></div>
+        </div>
+        <div class="photo-row photo-row--1-2">
+            <div class="photo-item photo-item--landscape" data-index="11">
+                <img src="https://l.icdbcdn.com/oh/1390079f-3ef1-45bd-8a97-0832a84f7b74.jpg?w=1000" alt="Open Floor Plan" loading="lazy">
+                <div class="photo-item__overlay"><span>Open Floor Plan</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="12">
+                <img src="https://l.icdbcdn.com/oh/e1ceb422-fbf9-404e-b997-d408e404f448.jpg?w=600" alt="Living Room Seating" loading="lazy">
+                <div class="photo-item__overlay"><span>Comfortable Seating</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="13">
+                <img src="https://l.icdbcdn.com/oh/bc92aa6f-da57-4644-b18e-06dce4d87df3.jpg?w=600" alt="Living Space" loading="lazy">
+                <div class="photo-item__overlay"><span>Living Space</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="14">
+                <img src="https://l.icdbcdn.com/oh/ff498698-7011-4e20-a74a-4870c23ad5be.jpg?w=600" alt="Decor Details" loading="lazy">
+                <div class="photo-item__overlay"><span>Decor Details</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="15">
+                <img src="https://l.icdbcdn.com/oh/7de93c4a-6e10-4bba-adb4-9b5859fe212a.jpg?w=600" alt="Entertainment Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Entertainment Area</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Kitchen Section -->
+    <!-- KITCHEN & DINING -->
     <section class="photo-section" id="kitchen">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div class="photo-section__title">
-                <h2>Kitchen</h2>
-                <p>Fully equipped for gourmet cooking</p>
+        <p class="photo-section__label">Kitchen & Dining</p>
+        <h2 class="photo-section__title">Fully Equipped for Gourmet Cooking</h2>
+
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="16">
+                <img src="https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg?w=1400" alt="Kitchen" loading="lazy">
+                <div class="photo-item__overlay"><span>Gourmet Kitchen</span></div>
             </div>
         </div>
-        <div class="photo-full" data-index="3" data-caption="Fully Equipped Gourmet Kitchen">
-            <img src="https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg?w=1600" alt="Kitchen">
-        </div>
-        <div class="photo-grid photo-grid--2col" style="margin-top: 8px;">
-            <div class="photo-grid__item" data-index="13" data-caption="Kitchen Island and Bar Seating">
-                <img src="https://l.icdbcdn.com/oh/3c47535c-20b3-4737-9b0d-71ed86a6337f.jpg?w=800" alt="Kitchen Island">
-                <div class="photo-grid__caption"><span>Kitchen Island</span></div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="17">
+                <img src="https://l.icdbcdn.com/oh/3c47535c-20b3-4737-9b0d-71ed86a6337f.jpg?w=800" alt="Kitchen Island" loading="lazy">
+                <div class="photo-item__overlay"><span>Kitchen Island & Bar</span></div>
             </div>
-            <div class="photo-grid__item" data-index="3" data-caption="Kitchen Details">
-                <img src="https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg?w=800" alt="Kitchen View">
-                <div class="photo-grid__caption"><span>Cooking Area</span></div>
+            <div class="photo-item photo-item--landscape" data-index="18">
+                <img src="https://l.icdbcdn.com/oh/45731dda-e90e-4e4c-adf6-47a807aa8264.jpg?w=800" alt="Kitchen Appliances" loading="lazy">
+                <div class="photo-item__overlay"><span>Modern Appliances</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2-1">
+            <div class="photo-item photo-item--landscape" data-index="19">
+                <img src="https://l.icdbcdn.com/oh/3dc6c1ac-63d7-448f-861f-35be28f05eec.jpg?w=1000" alt="Dining Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Dining Area</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="20">
+                <img src="https://l.icdbcdn.com/oh/980da3c6-8670-469c-b5b1-cf53897ed12f.jpg?w=600" alt="Dining Table" loading="lazy">
+                <div class="photo-item__overlay"><span>Dining Table</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="21">
+                <img src="https://l.icdbcdn.com/oh/84c906b3-7132-4b10-9254-207a36612124.jpg?w=600" alt="Kitchen Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Kitchen Detail</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="22">
+                <img src="https://l.icdbcdn.com/oh/0f9987d4-eda2-4d7a-87ec-2dfe56a8c080.jpg?w=600" alt="Coffee Station" loading="lazy">
+                <div class="photo-item__overlay"><span>Coffee Station</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="23">
+                <img src="https://l.icdbcdn.com/oh/f50056ed-60f9-4856-8b06-9d88139e165d.jpg?w=600" alt="Pantry" loading="lazy">
+                <div class="photo-item__overlay"><span>Pantry & Storage</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Bedrooms Section -->
+    <!-- MASTER SUITE -->
+    <section class="photo-section" id="master">
+        <p class="photo-section__label">Master Suite</p>
+        <h2 class="photo-section__title">Your Private Retreat</h2>
+
+        <div class="photo-row photo-row--1-2">
+            <div class="photo-item photo-item--landscape" data-index="24">
+                <img src="https://l.icdbcdn.com/oh/c1dcc6cf-6fea-40b4-897d-dbab66d1a30d.jpg?w=1000" alt="Master Bedroom" loading="lazy">
+                <div class="photo-item__overlay"><span>Master Bedroom</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="25">
+                <img src="https://l.icdbcdn.com/oh/bd78ee68-344a-4865-a098-8ff7a8b40146.jpg?w=600" alt="Master Bed Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>King Bed</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="26">
+                <img src="https://l.icdbcdn.com/oh/90fcbd3d-022f-4bdd-95e7-288834cccfc1.jpg?w=800" alt="Master Bathroom" loading="lazy">
+                <div class="photo-item__overlay"><span>En-Suite Bathroom</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="27">
+                <img src="https://l.icdbcdn.com/oh/567fe661-0d0b-4f35-9abf-353e9ddd7de2.jpg?w=800" alt="Master Closet" loading="lazy">
+                <div class="photo-item__overlay"><span>Walk-in Closet</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="28">
+                <img src="https://l.icdbcdn.com/oh/697e8b86-1bef-4b39-824f-244d0d22fa9c.jpg?w=600" alt="Master Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Suite Details</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="29">
+                <img src="https://l.icdbcdn.com/oh/707efe1d-b9b3-4a48-b67a-8038a851cb26.jpg?w=600" alt="Master View" loading="lazy">
+                <div class="photo-item__overlay"><span>Bedroom View</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="30">
+                <img src="https://l.icdbcdn.com/oh/d78f2ddb-c53f-4c2f-b501-7aa593676237.jpg?w=600" alt="Master Amenities" loading="lazy">
+                <div class="photo-item__overlay"><span>Master Amenities</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEDROOMS -->
     <section class="photo-section" id="bedrooms">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+        <p class="photo-section__label">Bedrooms</p>
+        <h2 class="photo-section__title">Comfortable Sleeping for Up to 16</h2>
+
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="31">
+                <img src="https://l.icdbcdn.com/oh/387d881d-be0c-4183-bc55-a53dbc1eb4ac.jpg?w=800" alt="Guest Bedroom 1" loading="lazy">
+                <div class="photo-item__overlay"><span>Guest Bedroom</span></div>
             </div>
-            <div class="photo-section__title">
-                <h2>Bedrooms</h2>
-                <p>Comfortable sleeping for up to 16 guests</p>
+            <div class="photo-item photo-item--landscape" data-index="32">
+                <img src="https://l.icdbcdn.com/oh/e35a61fa-cfeb-4e5e-a567-eaa358710a99.jpg?w=800" alt="Guest Bedroom 2" loading="lazy">
+                <div class="photo-item__overlay"><span>Second Bedroom</span></div>
             </div>
         </div>
-        <div class="photo-grid photo-grid--3col">
-            <div class="photo-grid__item" data-index="4" data-caption="Master Bedroom with King Bed">
-                <img src="https://l.icdbcdn.com/oh/c1dcc6cf-6fea-40b4-897d-dbab66d1a30d.jpg?w=800" alt="Master Bedroom">
-                <div class="photo-grid__caption"><span>Master Bedroom</span></div>
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="33">
+                <img src="https://l.icdbcdn.com/oh/ccc4bbc4-6348-48b8-8108-6fbf47e77d0f.jpg?w=1400" alt="Bunk Room" loading="lazy">
+                <div class="photo-item__overlay"><span>Bunk Room</span></div>
             </div>
-            <div class="photo-grid__item" data-index="5" data-caption="Comfortable Guest Bedroom">
-                <img src="https://l.icdbcdn.com/oh/387d881d-be0c-4183-bc55-a53dbc1eb4ac.jpg?w=800" alt="Guest Bedroom">
-                <div class="photo-grid__caption"><span>Guest Bedroom</span></div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="34">
+                <img src="https://l.icdbcdn.com/oh/f8e7f2e8-9236-490a-82f4-b6086dae8707.jpg?w=600" alt="Bunk Beds" loading="lazy">
+                <div class="photo-item__overlay"><span>Kids' Bunks</span></div>
             </div>
-            <div class="photo-grid__item" data-index="10" data-caption="Bunk Room for Kids">
-                <img src="https://l.icdbcdn.com/oh/f8e7f2e8-9236-490a-82f4-b6086dae8707.jpg?w=800" alt="Bunk Room">
-                <div class="photo-grid__caption"><span>Bunk Room</span></div>
+            <div class="photo-item photo-item--landscape" data-index="35">
+                <img src="https://l.icdbcdn.com/oh/bea48e7b-8975-45f2-9b53-7406b56343c9.jpg?w=600" alt="Bedroom Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Bedroom Detail</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="36">
+                <img src="https://l.icdbcdn.com/oh/6b5ae2e4-9706-4b3b-be8d-cc3850bef5b6.jpg?w=600" alt="Bed Linens" loading="lazy">
+                <div class="photo-item__overlay"><span>Premium Linens</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2-1">
+            <div class="photo-item photo-item--landscape" data-index="37">
+                <img src="https://l.icdbcdn.com/oh/a2f43d37-a619-4838-b38b-8722ac0123c3.jpg?w=1000" alt="Third Bedroom" loading="lazy">
+                <div class="photo-item__overlay"><span>Third Bedroom</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="38">
+                <img src="https://l.icdbcdn.com/oh/0725668a-15c5-45a0-8674-6c7936000b4a.jpg?w=600" alt="Bedroom Closet" loading="lazy">
+                <div class="photo-item__overlay"><span>Closet Space</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Bathrooms Section -->
+    <!-- BATHROOMS -->
     <section class="photo-section" id="bathrooms">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><path d="M9 6L6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" y1="5" x2="8" y2="7"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="7" y1="19" x2="7" y2="21"/><line x1="17" y1="19" x2="17" y2="21"/></svg>
+        <p class="photo-section__label">Bathrooms</p>
+        <h2 class="photo-section__title">Modern Fixtures & Spa-Like Comfort</h2>
+
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="39">
+                <img src="https://l.icdbcdn.com/oh/7760a8bb-3819-46e3-a181-517a76efa399.jpg?w=800" alt="Master Bathroom" loading="lazy">
+                <div class="photo-item__overlay"><span>Master Bathroom</span></div>
             </div>
-            <div class="photo-section__title">
-                <h2>Bathrooms</h2>
-                <p>Modern fixtures and spa-like amenities</p>
+            <div class="photo-item photo-item--landscape" data-index="40">
+                <img src="https://l.icdbcdn.com/oh/c90fa74d-c8d2-4450-b5b9-771fd721acce.jpg?w=800" alt="Guest Bathroom" loading="lazy">
+                <div class="photo-item__overlay"><span>Guest Bathroom</span></div>
             </div>
         </div>
-        <div class="photo-grid photo-grid--mixed-alt">
-            <div class="photo-grid__item" data-index="11" data-caption="Luxurious Master Bathroom">
-                <img src="https://l.icdbcdn.com/oh/7760a8bb-3819-46e3-a181-517a76efa399.jpg?w=800" alt="Master Bathroom">
-                <div class="photo-grid__caption"><span>Master Bathroom</span></div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="41">
+                <img src="https://l.icdbcdn.com/oh/6910fbe3-1d7f-45e8-b95a-a9060836694e.jpg?w=600" alt="Shower" loading="lazy">
+                <div class="photo-item__overlay"><span>Walk-in Shower</span></div>
             </div>
-            <div class="photo-grid__item" data-index="11" data-caption="Bathroom Details">
-                <img src="https://l.icdbcdn.com/oh/7760a8bb-3819-46e3-a181-517a76efa399.jpg?w=800" alt="Bathroom View">
-                <div class="photo-grid__caption"><span>Double Vanity</span></div>
+            <div class="photo-item photo-item--landscape" data-index="42">
+                <img src="https://l.icdbcdn.com/oh/bc16ff6b-668a-449f-90e2-48a1417d3f58.jpg?w=600" alt="Double Vanity" loading="lazy">
+                <div class="photo-item__overlay"><span>Double Vanity</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="43">
+                <img src="https://l.icdbcdn.com/oh/59f9259f-0e23-4e66-9005-b5beae58b838.jpg?w=600" alt="Bathroom Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Bathroom Detail</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="44">
+                <img src="https://l.icdbcdn.com/oh/4224240f-1d01-4530-8a1e-09a0bcaf0cda.jpg?w=800" alt="Half Bath" loading="lazy">
+                <div class="photo-item__overlay"><span>Half Bath</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="45">
+                <img src="https://l.icdbcdn.com/oh/58a66cbc-c516-4657-b274-3a4cf3a0cb21.jpg?w=800" alt="Bathroom Mirror" loading="lazy">
+                <div class="photo-item__overlay"><span>Vanity Mirror</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Outdoor Section -->
+    <!-- LOFT & GAME ROOM -->
+    <section class="photo-section" id="loft">
+        <p class="photo-section__label">Loft & Game Room</p>
+        <h2 class="photo-section__title">Entertainment for Everyone</h2>
+
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="46">
+                <img src="https://l.icdbcdn.com/oh/f18a4c34-d99b-4002-af38-9cbb548ae65e.jpg?w=1400" alt="Game Room" loading="lazy">
+                <div class="photo-item__overlay"><span>Game Room</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="47">
+                <img src="https://l.icdbcdn.com/oh/d17b5a0d-e975-45d7-b357-ffa196e5b60b.jpg?w=800" alt="Loft Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Loft Area</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="48">
+                <img src="https://l.icdbcdn.com/oh/53a3c4aa-fdbd-4a9f-8614-40414372bf6e.jpg?w=800" alt="Game Table" loading="lazy">
+                <div class="photo-item__overlay"><span>Game Table</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="49">
+                <img src="https://l.icdbcdn.com/oh/d36faea2-2131-44f2-9e23-8a66f69e278d.jpg?w=600" alt="Entertainment" loading="lazy">
+                <div class="photo-item__overlay"><span>Entertainment</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="50">
+                <img src="https://l.icdbcdn.com/oh/d4d724fb-dac0-4f55-8638-ccf221eb302e.jpg?w=600" alt="Loft Detail" loading="lazy">
+                <div class="photo-item__overlay"><span>Loft Detail</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="51">
+                <img src="https://l.icdbcdn.com/oh/a103b91d-eb47-48f8-b39a-19b1c20e90cd.jpg?w=600" alt="Seating Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Seating Area</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTDOOR -->
     <section class="photo-section" id="outdoor">
-        <div class="photo-section__header">
-            <div class="photo-section__icon">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <p class="photo-section__label">Outdoor Spaces</p>
+        <h2 class="photo-section__title">Deck, Hot Tub & Fire Pit</h2>
+
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="52">
+                <img src="https://l.icdbcdn.com/oh/10396493-a28f-46eb-b235-b917cc252917.jpg?w=800" alt="Back Patio" loading="lazy">
+                <div class="photo-item__overlay"><span>Back Patio</span></div>
             </div>
-            <div class="photo-section__title">
-                <h2>Outdoor Spaces</h2>
-                <p>1+ acre of wooded paradise</p>
-            </div>
-        </div>
-        <div class="photo-grid photo-grid--2col">
-            <div class="photo-grid__item" data-index="6" data-caption="Relaxing Back Patio with Mountain Views">
-                <img src="https://l.icdbcdn.com/oh/10396493-a28f-46eb-b235-b917cc252917.jpg?w=800" alt="Back Patio">
-                <div class="photo-grid__caption"><span>Back Patio</span></div>
-            </div>
-            <div class="photo-grid__item" data-index="7" data-caption="Private Hot Tub">
-                <img src="https://l.icdbcdn.com/oh/3e2a20a7-6f75-4e86-8f79-cde81dda5478.jpg?w=800" alt="Hot Tub">
-                <div class="photo-grid__caption"><span>Private Hot Tub</span></div>
+            <div class="photo-item photo-item--landscape" data-index="53">
+                <img src="https://l.icdbcdn.com/oh/3e2a20a7-6f75-4e86-8f79-cde81dda5478.jpg?w=800" alt="Hot Tub" loading="lazy">
+                <div class="photo-item__overlay"><span>Private Hot Tub</span></div>
             </div>
         </div>
-        <div class="photo-grid photo-grid--3col" style="margin-top: 8px;">
-            <div class="photo-grid__item" data-index="12" data-caption="Scenic Wooded Property">
-                <img src="https://l.icdbcdn.com/oh/56243457-9e5f-47ce-b4a5-b3d82c654dab.jpg?w=800" alt="Property Views">
-                <div class="photo-grid__caption"><span>Wooded Views</span></div>
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="54">
+                <img src="https://l.icdbcdn.com/oh/c8d84762-337c-41c5-8133-3314d4e2633d.jpg?w=1400" alt="Deck Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Spacious Deck</span></div>
             </div>
-            <div class="photo-grid__item" data-index="15" data-caption="Outdoor Fire Pit Area">
-                <img src="https://l.icdbcdn.com/oh/90617f86-e8ae-4f71-b7b5-ab92d75e2f03.jpg?w=800" alt="Fire Pit">
-                <div class="photo-grid__caption"><span>Fire Pit</span></div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="55">
+                <img src="https://l.icdbcdn.com/oh/90617f86-e8ae-4f71-b7b5-ab92d75e2f03.jpg?w=600" alt="Fire Pit" loading="lazy">
+                <div class="photo-item__overlay"><span>Fire Pit</span></div>
             </div>
-            <div class="photo-grid__item" data-index="17" data-caption="Deck and Outdoor Living Space">
-                <img src="https://l.icdbcdn.com/oh/c8d84762-337c-41c5-8133-3314d4e2633d.jpg?w=800" alt="Deck Area">
-                <div class="photo-grid__caption"><span>Deck Area</span></div>
+            <div class="photo-item photo-item--landscape" data-index="56">
+                <img src="https://l.icdbcdn.com/oh/1a955661-56ab-4653-bbc8-b4ff2796071c.jpg?w=600" alt="Outdoor Seating" loading="lazy">
+                <div class="photo-item__overlay"><span>Outdoor Seating</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="57">
+                <img src="https://l.icdbcdn.com/oh/0415b134-e06c-4122-b39f-88caa8a16364.jpg?w=600" alt="Grill Area" loading="lazy">
+                <div class="photo-item__overlay"><span>Traeger Flat Top Griddle</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="58">
+                <img src="https://l.icdbcdn.com/oh/ce4772ee-9ebc-49ae-8ee8-ef6f5cd83124.jpg?w=800" alt="Porch Swing" loading="lazy">
+                <div class="photo-item__overlay"><span>Porch Swing</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="59">
+                <img src="https://l.icdbcdn.com/oh/d94143ca-a23b-4b6a-b8c3-f439b6be93c7.jpg?w=800" alt="Outdoor Dining" loading="lazy">
+                <div class="photo-item__overlay"><span>Outdoor Dining</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIEWS & PROPERTY -->
+    <section class="photo-section" id="views">
+        <p class="photo-section__label">Views & Property</p>
+        <h2 class="photo-section__title">1+ Acre of Wooded Paradise</h2>
+
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="60">
+                <img src="https://l.icdbcdn.com/oh/56243457-9e5f-47ce-b4a5-b3d82c654dab.jpg?w=1400" alt="Wooded Property" loading="lazy">
+                <div class="photo-item__overlay"><span>Wooded Property</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="61">
+                <img src="https://l.icdbcdn.com/oh/282eb7b1-ce00-4bde-9ae2-9fce03bd25bf.jpg?w=800" alt="Forest View" loading="lazy">
+                <div class="photo-item__overlay"><span>Forest View</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="62">
+                <img src="https://l.icdbcdn.com/oh/f045f082-e0da-4255-81dd-a18d73333fcb.jpg?w=800" alt="Scenic Trail" loading="lazy">
+                <div class="photo-item__overlay"><span>Scenic Trail</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--3">
+            <div class="photo-item photo-item--landscape" data-index="63">
+                <img src="https://l.icdbcdn.com/oh/e4095e40-bb50-473f-b29b-2e52084ff85e.jpg?w=600" alt="Nature" loading="lazy">
+                <div class="photo-item__overlay"><span>Surrounding Nature</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="64">
+                <img src="https://l.icdbcdn.com/oh/9da36495-1f3e-4a36-b178-bf4691410c57.jpg?w=600" alt="Sunset View" loading="lazy">
+                <div class="photo-item__overlay"><span>Sunset View</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="65">
+                <img src="https://l.icdbcdn.com/oh/e13d58d8-63ed-48ad-bec4-797ebda28ea5.jpg?w=600" alt="Property Path" loading="lazy">
+                <div class="photo-item__overlay"><span>Property Path</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--2">
+            <div class="photo-item photo-item--landscape" data-index="66">
+                <img src="https://l.icdbcdn.com/oh/576c7c16-fa4a-43d6-be23-c7f376f63113.jpg?w=800" alt="Creek View" loading="lazy">
+                <div class="photo-item__overlay"><span>Creek View</span></div>
+            </div>
+            <div class="photo-item photo-item--landscape" data-index="67">
+                <img src="https://l.icdbcdn.com/oh/92b59e69-21da-4287-910d-b35e15fee376.jpg?w=800" alt="Wildlife" loading="lazy">
+                <div class="photo-item__overlay"><span>Local Wildlife</span></div>
+            </div>
+        </div>
+        <div class="photo-row photo-row--1">
+            <div class="photo-item photo-item--hero" data-index="68">
+                <img src="https://l.icdbcdn.com/oh/160d9d71-4c96-42bf-b667-fbfb86e39a81.jpg?w=1400" alt="Mountain View" loading="lazy">
+                <div class="photo-item__overlay"><span>Mountain Views</span></div>
             </div>
         </div>
     </section>
@@ -438,7 +618,7 @@
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <div class="lightbox__header">
-            <span class="lightbox__counter" id="lightboxCounter">1 / 18</span>
+            <span class="lightbox__counter" id="lightboxCounter">1 / 69</span>
             <button class="lightbox__close" id="lightboxClose">
                 <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 Close
@@ -458,19 +638,15 @@
         </div>
     </div>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="cta-banner__bg">
-            <img src="https://l.icdbcdn.com/oh/86359a19-950c-492f-9f0e-b0e27bce3da0.jpg?w=2080" alt="Cabin Exterior">
-        </div>
-        <div class="cta-banner__overlay"></div>
-        <div class="cta-banner__content">
-            <h2>Ready to Experience It In Person?</h2>
-            <p>Book your stay and create unforgettable memories at All FORE The View.</p>
-            <a href="#" class="btn btn--primary" onclick="openBookingModal(); return false;">
-                Check Availability
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+    <!-- Embedded Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-section__inner">
+            <p class="booking-section__label">Book Your Stay</p>
+            <h2>Check Availability & Reserve</h2>
+            <p>Select your dates to see availability and rates. Complete your reservation right here.</p>
+            <div class="booking-section__frame">
+                <iframe src="https://checkout.lodgify.com/allforetheview/en/#/350009" title="Book Your Stay"></iframe>
+            </div>
         </div>
     </section>
 
@@ -492,42 +668,83 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
-    <div class="booking-modal" id="bookingModal">
-        <div class="booking-modal__content">
-            <button class="booking-modal__close" onclick="closeBookingModal()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
-            <iframe id="bookingFrame" src="" frameborder="0"></iframe>
-        </div>
-    </div>
-
     <script>
-        // All photos data
+        // All 69 photos
         const allPhotos = [
-            { src: 'https://l.icdbcdn.com/oh/4bfc4c65-3f0c-4102-9ca0-9e499acdb026.jpg', caption: 'Welcome to All FORE The View - Cabin Exterior' },
-            { src: 'https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg', caption: 'Spacious Living Room with Vaulted Ceilings' },
-            { src: 'https://l.icdbcdn.com/oh/01467c16-3996-4049-8b4a-65486f886af8.jpg', caption: 'Cozy Gathering Space with Fireplace' },
-            { src: 'https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg', caption: 'Fully Equipped Gourmet Kitchen' },
-            { src: 'https://l.icdbcdn.com/oh/c1dcc6cf-6fea-40b4-897d-dbab66d1a30d.jpg', caption: 'Master Bedroom with King Bed' },
-            { src: 'https://l.icdbcdn.com/oh/387d881d-be0c-4183-bc55-a53dbc1eb4ac.jpg', caption: 'Comfortable Guest Bedroom' },
-            { src: 'https://l.icdbcdn.com/oh/10396493-a28f-46eb-b235-b917cc252917.jpg', caption: 'Relaxing Back Patio with Mountain Views' },
+            { src: 'https://l.icdbcdn.com/oh/4bfc4c65-3f0c-4102-9ca0-9e499acdb026.jpg', caption: 'Cabin Exterior' },
+            { src: 'https://l.icdbcdn.com/oh/d1d3edd1-ccf6-4286-b815-1e28bf922ef9.jpg', caption: 'Cabin Architecture' },
+            { src: 'https://l.icdbcdn.com/oh/ab653370-1e15-4f45-b13f-d201a8db4853.jpg', caption: 'Front Entrance' },
+            { src: 'https://l.icdbcdn.com/oh/c9733e7a-5db7-4e5f-8c43-ee759feafe88.jpg', caption: 'Exterior Detail' },
+            { src: 'https://l.icdbcdn.com/oh/89bf4abe-2d36-4cee-ba60-a4e23acfc966.jpg', caption: 'Driveway Approach' },
+            { src: 'https://l.icdbcdn.com/oh/6a10d4ef-a2fc-4a62-8a45-1eb36454b629.jpg', caption: 'Side View' },
+            { src: 'https://l.icdbcdn.com/oh/b991309d-9d7b-405c-8d53-c2e837db1363.jpg', caption: 'Entrance' },
+            { src: 'https://l.icdbcdn.com/oh/b4884ea7-53c2-4c89-a239-debe0c475d08.jpg', caption: 'Evening View' },
+            { src: 'https://l.icdbcdn.com/oh/02f82d12-44a2-45e2-873d-d7e917b88f24.jpg', caption: 'Living Room with Vaulted Ceilings' },
+            { src: 'https://l.icdbcdn.com/oh/01467c16-3996-4049-8b4a-65486f886af8.jpg', caption: 'Fireplace & Seating' },
+            { src: 'https://l.icdbcdn.com/oh/3cb9f42c-c555-4ee8-a1fe-6681893e04b7.jpg', caption: 'Living Area Detail' },
+            { src: 'https://l.icdbcdn.com/oh/1390079f-3ef1-45bd-8a97-0832a84f7b74.jpg', caption: 'Open Floor Plan' },
+            { src: 'https://l.icdbcdn.com/oh/e1ceb422-fbf9-404e-b997-d408e404f448.jpg', caption: 'Comfortable Seating' },
+            { src: 'https://l.icdbcdn.com/oh/bc92aa6f-da57-4644-b18e-06dce4d87df3.jpg', caption: 'Living Space' },
+            { src: 'https://l.icdbcdn.com/oh/ff498698-7011-4e20-a74a-4870c23ad5be.jpg', caption: 'Decor Details' },
+            { src: 'https://l.icdbcdn.com/oh/7de93c4a-6e10-4bba-adb4-9b5859fe212a.jpg', caption: 'Entertainment Area' },
+            { src: 'https://l.icdbcdn.com/oh/2a9efa26-adc4-4f9e-9d55-276a8c90ee44.jpg', caption: 'Gourmet Kitchen' },
+            { src: 'https://l.icdbcdn.com/oh/3c47535c-20b3-4737-9b0d-71ed86a6337f.jpg', caption: 'Kitchen Island & Bar' },
+            { src: 'https://l.icdbcdn.com/oh/45731dda-e90e-4e4c-adf6-47a807aa8264.jpg', caption: 'Modern Appliances' },
+            { src: 'https://l.icdbcdn.com/oh/3dc6c1ac-63d7-448f-861f-35be28f05eec.jpg', caption: 'Dining Area' },
+            { src: 'https://l.icdbcdn.com/oh/980da3c6-8670-469c-b5b1-cf53897ed12f.jpg', caption: 'Dining Table' },
+            { src: 'https://l.icdbcdn.com/oh/84c906b3-7132-4b10-9254-207a36612124.jpg', caption: 'Kitchen Detail' },
+            { src: 'https://l.icdbcdn.com/oh/0f9987d4-eda2-4d7a-87ec-2dfe56a8c080.jpg', caption: 'Coffee Station' },
+            { src: 'https://l.icdbcdn.com/oh/f50056ed-60f9-4856-8b06-9d88139e165d.jpg', caption: 'Pantry & Storage' },
+            { src: 'https://l.icdbcdn.com/oh/c1dcc6cf-6fea-40b4-897d-dbab66d1a30d.jpg', caption: 'Master Bedroom' },
+            { src: 'https://l.icdbcdn.com/oh/bd78ee68-344a-4865-a098-8ff7a8b40146.jpg', caption: 'King Bed' },
+            { src: 'https://l.icdbcdn.com/oh/90fcbd3d-022f-4bdd-95e7-288834cccfc1.jpg', caption: 'En-Suite Bathroom' },
+            { src: 'https://l.icdbcdn.com/oh/567fe661-0d0b-4f35-9abf-353e9ddd7de2.jpg', caption: 'Walk-in Closet' },
+            { src: 'https://l.icdbcdn.com/oh/697e8b86-1bef-4b39-824f-244d0d22fa9c.jpg', caption: 'Suite Details' },
+            { src: 'https://l.icdbcdn.com/oh/707efe1d-b9b3-4a48-b67a-8038a851cb26.jpg', caption: 'Bedroom View' },
+            { src: 'https://l.icdbcdn.com/oh/d78f2ddb-c53f-4c2f-b501-7aa593676237.jpg', caption: 'Master Amenities' },
+            { src: 'https://l.icdbcdn.com/oh/387d881d-be0c-4183-bc55-a53dbc1eb4ac.jpg', caption: 'Guest Bedroom' },
+            { src: 'https://l.icdbcdn.com/oh/e35a61fa-cfeb-4e5e-a567-eaa358710a99.jpg', caption: 'Second Bedroom' },
+            { src: 'https://l.icdbcdn.com/oh/ccc4bbc4-6348-48b8-8108-6fbf47e77d0f.jpg', caption: 'Bunk Room' },
+            { src: 'https://l.icdbcdn.com/oh/f8e7f2e8-9236-490a-82f4-b6086dae8707.jpg', caption: "Kids' Bunks" },
+            { src: 'https://l.icdbcdn.com/oh/bea48e7b-8975-45f2-9b53-7406b56343c9.jpg', caption: 'Bedroom Detail' },
+            { src: 'https://l.icdbcdn.com/oh/6b5ae2e4-9706-4b3b-be8d-cc3850bef5b6.jpg', caption: 'Premium Linens' },
+            { src: 'https://l.icdbcdn.com/oh/a2f43d37-a619-4838-b38b-8722ac0123c3.jpg', caption: 'Third Bedroom' },
+            { src: 'https://l.icdbcdn.com/oh/0725668a-15c5-45a0-8674-6c7936000b4a.jpg', caption: 'Closet Space' },
+            { src: 'https://l.icdbcdn.com/oh/7760a8bb-3819-46e3-a181-517a76efa399.jpg', caption: 'Master Bathroom' },
+            { src: 'https://l.icdbcdn.com/oh/c90fa74d-c8d2-4450-b5b9-771fd721acce.jpg', caption: 'Guest Bathroom' },
+            { src: 'https://l.icdbcdn.com/oh/6910fbe3-1d7f-45e8-b95a-a9060836694e.jpg', caption: 'Walk-in Shower' },
+            { src: 'https://l.icdbcdn.com/oh/bc16ff6b-668a-449f-90e2-48a1417d3f58.jpg', caption: 'Double Vanity' },
+            { src: 'https://l.icdbcdn.com/oh/59f9259f-0e23-4e66-9005-b5beae58b838.jpg', caption: 'Bathroom Detail' },
+            { src: 'https://l.icdbcdn.com/oh/4224240f-1d01-4530-8a1e-09a0bcaf0cda.jpg', caption: 'Half Bath' },
+            { src: 'https://l.icdbcdn.com/oh/58a66cbc-c516-4657-b274-3a4cf3a0cb21.jpg', caption: 'Vanity Mirror' },
+            { src: 'https://l.icdbcdn.com/oh/f18a4c34-d99b-4002-af38-9cbb548ae65e.jpg', caption: 'Game Room' },
+            { src: 'https://l.icdbcdn.com/oh/d17b5a0d-e975-45d7-b357-ffa196e5b60b.jpg', caption: 'Loft Area' },
+            { src: 'https://l.icdbcdn.com/oh/53a3c4aa-fdbd-4a9f-8614-40414372bf6e.jpg', caption: 'Game Table' },
+            { src: 'https://l.icdbcdn.com/oh/d36faea2-2131-44f2-9e23-8a66f69e278d.jpg', caption: 'Entertainment' },
+            { src: 'https://l.icdbcdn.com/oh/d4d724fb-dac0-4f55-8638-ccf221eb302e.jpg', caption: 'Loft Detail' },
+            { src: 'https://l.icdbcdn.com/oh/a103b91d-eb47-48f8-b39a-19b1c20e90cd.jpg', caption: 'Seating Area' },
+            { src: 'https://l.icdbcdn.com/oh/10396493-a28f-46eb-b235-b917cc252917.jpg', caption: 'Back Patio' },
             { src: 'https://l.icdbcdn.com/oh/3e2a20a7-6f75-4e86-8f79-cde81dda5478.jpg', caption: 'Private Hot Tub' },
-            { src: 'https://l.icdbcdn.com/oh/980da3c6-8670-469c-b5b1-cf53897ed12f.jpg', caption: 'Open Concept Dining Area' },
-            { src: 'https://l.icdbcdn.com/oh/d1d3edd1-ccf6-4286-b815-1e28bf922ef9.jpg', caption: 'Stunning Cabin Architecture' },
-            { src: 'https://l.icdbcdn.com/oh/f8e7f2e8-9236-490a-82f4-b6086dae8707.jpg', caption: 'Bunk Room for Kids' },
-            { src: 'https://l.icdbcdn.com/oh/7760a8bb-3819-46e3-a181-517a76efa399.jpg', caption: 'Luxurious Master Bathroom' },
-            { src: 'https://l.icdbcdn.com/oh/56243457-9e5f-47ce-b4a5-b3d82c654dab.jpg', caption: 'Scenic Wooded Property' },
-            { src: 'https://l.icdbcdn.com/oh/3c47535c-20b3-4737-9b0d-71ed86a6337f.jpg', caption: 'Kitchen Island and Bar Seating' },
-            { src: 'https://l.icdbcdn.com/oh/f18a4c34-d99b-4002-af38-9cbb548ae65e.jpg', caption: 'Game Room Entertainment' },
-            { src: 'https://l.icdbcdn.com/oh/90617f86-e8ae-4f71-b7b5-ab92d75e2f03.jpg', caption: 'Outdoor Fire Pit Area' },
-            { src: 'https://l.icdbcdn.com/oh/ab653370-1e15-4f45-b13f-d201a8db4853.jpg', caption: 'Cabin Front Entrance' },
-            { src: 'https://l.icdbcdn.com/oh/c8d84762-337c-41c5-8133-3314d4e2633d.jpg', caption: 'Deck and Outdoor Living Space' }
+            { src: 'https://l.icdbcdn.com/oh/c8d84762-337c-41c5-8133-3314d4e2633d.jpg', caption: 'Spacious Deck' },
+            { src: 'https://l.icdbcdn.com/oh/90617f86-e8ae-4f71-b7b5-ab92d75e2f03.jpg', caption: 'Fire Pit' },
+            { src: 'https://l.icdbcdn.com/oh/1a955661-56ab-4653-bbc8-b4ff2796071c.jpg', caption: 'Outdoor Seating' },
+            { src: 'https://l.icdbcdn.com/oh/0415b134-e06c-4122-b39f-88caa8a16364.jpg', caption: 'Traeger Flat Top Griddle' },
+            { src: 'https://l.icdbcdn.com/oh/ce4772ee-9ebc-49ae-8ee8-ef6f5cd83124.jpg', caption: 'Porch Swing' },
+            { src: 'https://l.icdbcdn.com/oh/d94143ca-a23b-4b6a-b8c3-f439b6be93c7.jpg', caption: 'Outdoor Dining' },
+            { src: 'https://l.icdbcdn.com/oh/56243457-9e5f-47ce-b4a5-b3d82c654dab.jpg', caption: 'Wooded Property' },
+            { src: 'https://l.icdbcdn.com/oh/282eb7b1-ce00-4bde-9ae2-9fce03bd25bf.jpg', caption: 'Forest View' },
+            { src: 'https://l.icdbcdn.com/oh/f045f082-e0da-4255-81dd-a18d73333fcb.jpg', caption: 'Scenic Trail' },
+            { src: 'https://l.icdbcdn.com/oh/e4095e40-bb50-473f-b29b-2e52084ff85e.jpg', caption: 'Surrounding Nature' },
+            { src: 'https://l.icdbcdn.com/oh/9da36495-1f3e-4a36-b178-bf4691410c57.jpg', caption: 'Sunset View' },
+            { src: 'https://l.icdbcdn.com/oh/e13d58d8-63ed-48ad-bec4-797ebda28ea5.jpg', caption: 'Property Path' },
+            { src: 'https://l.icdbcdn.com/oh/576c7c16-fa4a-43d6-be23-c7f376f63113.jpg', caption: 'Creek View' },
+            { src: 'https://l.icdbcdn.com/oh/92b59e69-21da-4287-910d-b35e15fee376.jpg', caption: 'Local Wildlife' },
+            { src: 'https://l.icdbcdn.com/oh/160d9d71-4c96-42bf-b667-fbfb86e39a81.jpg', caption: 'Mountain Views' }
         ];
 
         let currentIndex = 0;
 
-        // Navigation
+        // Navigation toggle
         const navToggle = document.getElementById('navToggle');
         const navMenu = document.getElementById('navMenu');
         navToggle.addEventListener('click', () => {
@@ -541,23 +758,18 @@
             });
         });
 
-        // Photo Tour Navigation - Active state on scroll
+        // Photo Tour Nav - Active state on scroll
         const sections = document.querySelectorAll('.photo-section');
         const navLinks = document.querySelectorAll('.photo-tour-nav__link');
-
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 160;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
+                const top = section.offsetTop - 160;
+                if (scrollY >= top) current = section.getAttribute('id');
             });
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
             });
         });
 
@@ -573,33 +785,28 @@
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
         function updateLightbox() {
             const photo = allPhotos[currentIndex];
             lightboxImg.src = photo.src + '?w=1600';
             lightboxCaption.textContent = photo.caption;
             lightboxCounter.textContent = `${currentIndex + 1} / ${allPhotos.length}`;
         }
-
         function closeLightbox() {
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
         }
-
         function nextImage() {
             currentIndex = (currentIndex + 1) % allPhotos.length;
             updateLightbox();
         }
-
         function prevImage() {
             currentIndex = (currentIndex - 1 + allPhotos.length) % allPhotos.length;
             updateLightbox();
         }
 
-        // Click handlers for all photo elements
-        document.querySelectorAll('.hero-collage__item, .photo-grid__item, .photo-full').forEach(item => {
-            item.addEventListener('click', (e) => {
-                if (e.target.closest('.hero-collage__btn')) return;
+        // Click handlers for all photos
+        document.querySelectorAll('.photo-item').forEach(item => {
+            item.addEventListener('click', () => {
                 const index = parseInt(item.dataset.index) || 0;
                 openLightbox(index);
             });
@@ -613,34 +820,10 @@
         });
 
         document.addEventListener('keydown', (e) => {
-            if (lightbox.classList.contains('active')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowRight') nextImage();
-                if (e.key === 'ArrowLeft') prevImage();
-            } else if (e.key === 'Escape') {
-                closeBookingModal();
-            }
-        });
-
-        // Booking Modal
-        function openBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            const frame = document.getElementById('bookingFrame');
-            frame.src = 'https://checkout.lodgify.com/allforetheview/en/#/350009';
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            const frame = document.getElementById('bookingFrame');
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-            frame.src = '';
-        }
-
-        document.getElementById('bookingModal').addEventListener('click', function(e) {
-            if (e.target === this) closeBookingModal();
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
         });
     </script>
 </body>
